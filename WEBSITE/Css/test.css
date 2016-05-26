@@ -1,0 +1,33 @@
+body {
+    background-color: blue;
+    margin: 0px;
+}
+
+header{
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#Home{
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    min-width: 13%;
+    max-width: 13%;
+    min-height: 10%;
+    max-height: 10%;
+    vertical-align: bottom;
+}
+
+nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: deepskyblue;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
