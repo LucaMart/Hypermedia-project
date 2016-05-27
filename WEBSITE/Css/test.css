@@ -14,10 +14,10 @@ header{
     top: 0px;
     left: 0px;
     bottom: 0px;
-    min-width: 13%;
-    max-width: 13%;
-    min-height: 10%;
-    max-height: 10%;
+    min-width: 100px;/*Questa deve variare a seconda della risoluzione*/
+    width: 11%;
+    min-height: 70px;/*questa deve variare a seconda della risoluzione*/
+    height: 9%;
     vertical-align: bottom;
 }
 
@@ -30,6 +30,8 @@ nav {
     max-width: 100%;
     min-height: 100%;
     max-height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 #LandButtons li{
@@ -37,8 +39,12 @@ nav {
 }
 
 #LandButtons{
-    padding: 5px;
+    padding: 5px; /*questo deve variare a seconda della risoluzione*/
     margin: 0px;
-    
+    white-space: nowrap;
 }
 
+.Landmark{
+    background-color: white;
+    
+}
