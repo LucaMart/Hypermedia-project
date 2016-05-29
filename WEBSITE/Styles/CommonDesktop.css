@@ -81,8 +81,6 @@ nav {
     background-color: deepskyblue;
     min-width: 100%;
     max-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
     margin: 0px;
     padding: 0px;
 }
@@ -95,8 +93,19 @@ nav {
     float: right;
 }
 
+#LandmarksNorthEast{
+    float: right;
+    margin: auto;
+}
+
+#LandmarksNorthEast li{
+    display: inline-block;
+}
+
+/*This is applied to the <a> element in the lists of landmarks*/
 #Landmark{
     background-color: white;
+    color: black;   /*Why does it not work?*/
     font-family: DejaVu-Sans Verdana sans-serif;
     font-size: 15 rem;
     margin: 1px;
@@ -106,7 +115,7 @@ nav {
 }
 
 #Landmark:hover{
-    color: (255,255,0);
+    color: black;
     background-color: azure;
     border: 1px rgb(100,100,250) solid;
 }
@@ -136,5 +145,5 @@ h3 {
 
 p {
     font-family: Georgia Times-New-Roman serif;
-    font-size: 14;
+    font-size: 14rem;
 }
