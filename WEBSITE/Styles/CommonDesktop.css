@@ -1,3 +1,51 @@
+/*RESET DEFAULT BROWSER STYLES */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*END RESET*/
+
+
 body {
     background-color: blue;
     margin: 0px;
@@ -16,14 +64,13 @@ header{
     margin: 0px;
 }
 
-#Home{
+#HomeLogo{
     top: 0px;
     left: 0px;
     bottom: 0px;
-    min-width: 100px;/*Questa deve variare a seconda della risoluzione*/
-    width: 11%;
-    min-height: 70px;/*questa deve variare a seconda della risoluzione*/
-    height: 9%;
+    /*min-width: 100px;/*Questa deve variare a seconda della risoluzione*/
+    width: 13%;
+    /*min-height: 70px;/*questa deve variare a seconda della risoluzione*/
     vertical-align: bottom;
 }
 
@@ -40,25 +87,45 @@ nav {
     padding: 0px;
 }
 
-#LandButtonsWest li{
-    display: inline-block;
-    width: 15%;
+
+nav a:hover{
+    color: (255,255,0);
+    background-color: cyan;
 }
 
-#LandButtonsWest{
-    padding: 5px; /*questo deve variare a seconda della risoluzione*/
-    margin: 0px;
-    white-space: nowrap;
+
+#LandmarksWest{
+    float: left;
 }
 
-#LandButtonsEast{
-}
-
-#LandButtonsNorthEast{
-
+#LandmarksEast{
+    float: right;
 }
 
 .Landmark{
     background-color: white;
+    font-family: DejaVu-Sans Verdana sans-serif;
+    font-size: 16;
+    margin: 2px;
+    padding: 2px;
+    border: 1px rgb(100,100,250) solid;
+}
 
+h1,h2,h3 {
+    font-family: DejaVu-Sans Verdana sans-serif;
+}
+
+h1 {
+    font-size: 20;
+}
+h2 {
+    font-size: 18;
+}
+h3 {
+    font-size: 16;
+}
+
+p {
+    font-family: Georgia Times-New-Roman serif;
+    font-size: 14;
 }
