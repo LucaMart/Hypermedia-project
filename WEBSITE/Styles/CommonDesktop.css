@@ -87,13 +87,6 @@ nav {
     padding: 0px;
 }
 
-
-nav a:hover{
-    color: (255,255,0);
-    background-color: cyan;
-}
-
-
 #LandmarksWest{
     float: left;
 }
@@ -102,27 +95,43 @@ nav a:hover{
     float: right;
 }
 
-.Landmark{
+#Landmark{
     background-color: white;
     font-family: DejaVu-Sans Verdana sans-serif;
-    font-size: 16;
-    margin: 2px;
-    padding: 2px;
+    font-size: 15 rem;
+    margin: 1px;
+    padding: 1px;
+    border: 1px rgb(50,50,70) solid;
+    line-height: 1.1;
+}
+
+#Landmark:hover{
+    color: (255,255,0);
+    background-color: azure;
     border: 1px rgb(100,100,250) solid;
 }
+
+.navbar-default {
+    background-color: aqua;
+}
+
+.navbar{
+   min-height: 10px;/*This overrides the basic setting in Bootstrap, that is 50px*/
+}
+
 
 h1,h2,h3 {
     font-family: DejaVu-Sans Verdana sans-serif;
 }
 
 h1 {
-    font-size: 20;
+    font-size: 20rem;
 }
 h2 {
-    font-size: 18;
+    font-size: 18rem;
 }
 h3 {
-    font-size: 16;
+    font-size: 16rem;
 }
 
 p {
