@@ -4,8 +4,9 @@ body {
 }
 
 .contentContainer {
-    width:90%;
+    width:80%;
     max-width: 1800px;
+    margin: auto;
 }
 
 header{
@@ -39,14 +40,22 @@ nav {
     padding: 0px;
 }
 
-#LandButtons li{
-    display: inline;
+#LandButtonsWest li{
+    display: inline-block;
+    width: 15%;
 }
 
-#LandButtons{
+#LandButtonsWest{
     padding: 5px; /*questo deve variare a seconda della risoluzione*/
     margin: 0px;
     white-space: nowrap;
+}
+
+#LandButtonsEast{
+}
+
+#LandButtonsNorthEast{
+
 }
 
 .Landmark{
