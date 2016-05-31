@@ -13,34 +13,23 @@ header{
     max-width: 100%;
     min-width: 100%;
     padding: 0px;
-    margin: 0px;
+    margin: 1px;
 }
 
 #HomeLogo{
     top: 0px;
     left: 0px;
     bottom: 0px;
-    /*min-width: 100px;/*Questa deve variare a seconda della risoluzione*/
-    width: 13%;
-    /*min-height: 70px;/*questa deve variare a seconda della risoluzione*/
     vertical-align: bottom;
 }
 
-nav {
-    top: 0;
-    left: 0;
-    right: 0;
+
+#mainNav {
     background-color: deepskyblue;
-    min-width: 100%;
-    max-width: 100%;
-    margin: 0px;
-    padding: 0px;
-}
-
-#secNavContainer {
-    padding: 0px;
-    float: right;
-
+    width:100%;
+    padding-top: 5px;
+    margin: 1px;
+    overflow: auto;
 }
 
 #LandmarksWest{
@@ -57,13 +46,23 @@ nav {
 
 
 /*This is applied to the <a> element in the lists of landmarks*/
-#Landmark{
+.Landmark{
+    display: inline-block;
     background-color: white;
+    color: black;
     font-family: DejaVu-Sans Verdana sans-serif;
     font-size: 16 rem;
-    margin: 2px;
+    padding: 4px;
     border: 1px rgb(50,50,70) solid;
 }
+
+.Landmark:hover{
+    border: 1px rgb(100,100,250) solid;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*IF USING THE BOOTSTRAP NAVBAR SYSTEM, THE NEXT 3 STYLES WILL BE APPLIED:*/
 /*This one refers to the same <a> elements. It is necessary to override the default Bootstrap properties.*/
 .navbar-nav li a{
   line-height: 1.3;
@@ -71,12 +70,6 @@ nav {
   padding: 5px 5px;
 }
 
-#Landmark:hover{
-    color: black;
-    background-color: lightyellow;
-    border: 1px rgb(100,100,250) solid;
-    text-decoration: none;
-}
 
 .navbar-default {
     background-color: aqua;
