@@ -78,7 +78,7 @@ nav {
     text-decoration: none;
 }
 
-.navbar-default {
+#navbar{
     background-color: aqua;
 }
 
