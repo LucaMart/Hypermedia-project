@@ -3,10 +3,11 @@ body {
     margin: 0px;
 }
 
-.contentContainer {
+#contentContainer {
     width:80%;
     max-width: 1800px;
-    margin: auto;
+    margin: 0 auto;
+    
 }
 
 header{
@@ -21,6 +22,7 @@ header{
     left: 0px;
     bottom: 0px;
     /*min-width: 100px;/*Questa deve variare a seconda della risoluzione*/
+    width: 13%;
     /*min-height: 70px;/*questa deve variare a seconda della risoluzione*/
     vertical-align: bottom;
 }
