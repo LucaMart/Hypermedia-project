@@ -1,0 +1,49 @@
+.content{
+    padding-left: 3%;
+    border: 2px dashed gray; 
+}
+
+#content1{
+    max-width: 50%;
+    min-width: 50%;
+    float: left;  
+}
+
+#content2{
+    max-width: 50%;
+    min-width: 50%;
+    float: right;
+}
+
+.title{
+    font-family: Verdana;
+    font-weight: bold;
+    color: royalblue;
+    display: inline;
+}
+
+.Button:link{
+    background-color: crimson;
+    color: white;
+    font-family: DejaVu-Sans, Verdana, sans-serif;
+    padding: 3px;
+    border: blue 1px solid;
+    margin: 2px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.Button:visited{
+    color: white;
+}
+.Button:hover{
+    background-color: darkblue;
+}
+
+
+
+/*TODO I bottoni cambiano il colore del testo dopo essere stati premuti*/
+.text{
+    font-family: DejaVu-Sans, sans-serif;
+    
+}
