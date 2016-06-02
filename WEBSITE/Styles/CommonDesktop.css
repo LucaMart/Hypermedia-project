@@ -1,0 +1,105 @@
+body {
+    background-color: blue;
+    margin: 0px;
+}
+
+#contentContainer {
+    width:80%;
+    max-width: 1800px;
+    margin: 0 auto;
+    
+}
+
+header{
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#HomeLogo{
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    /*min-width: 100px;/*Questa deve variare a seconda della risoluzione*/
+    /*min-height: 70px;/*questa deve variare a seconda della risoluzione*/
+    vertical-align: bottom;
+}
+
+#secNavContainer {
+    padding: 0px;
+    float: right;
+
+}
+
+/*#LandmarksEast{
+    float: right;
+    @media (max-width:992px){
+        float: left;
+    }
+}*/
+
+
+/*This is applied to the <a> element in the lists of landmarks*/
+#mainNav {
+    background-color: aqua;
+
+}
+
+#Landmark {
+    background-color: white;
+    color: black;
+    font-family: DejaVu-Sans, Verdana, sans-serif;
+    padding: 3px;
+    border: blue 1px solid;
+    margin: 1px;
+}
+
+#Landmark:hover {
+    background-color: crimson;
+    color: lightgray;
+    border: 1px lightgray solid;
+}
+
+#mainNavContainer{
+    background-color: aqua;
+}
+
+.navbar{
+   min-height: 10px;/*This overrides the basic setting in Bootstrap, that is 50px*/
+}
+
+
+h1,h2,h3 {
+    font-family: DejaVu-Sans Verdana sans-serif;
+}
+
+h1 {
+    font-size: 20rem;
+}
+h2 {
+    font-size: 18rem;
+}
+h3 {
+    font-size: 16rem;
+}
+
+p {
+    font-family: Georgia Times-New-Roman serif;
+    font-size: 14rem;
+}
+
+#mobileNavContainer{
+    display: none;
+}
+
+@media screen and (max-width: 767px){
+    #mainNavContainer{
+        display: none;
+    }
+    
+    #mobileNavContainer{
+        display: inline;
+        background-color: aqua;
+    }
+}
