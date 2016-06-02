@@ -4,19 +4,35 @@ body {
     height:100%;
 }
 
+header {
+   background-color: rgb(50,50,250);
+   overflow: auto;
+}
+
 #pageContainer {
     margin-left:10%;
     margin-right:10%;
     height:100%;
 }
 
+
 #HomeLogo {
     float: left;
+    margin:1px;
 }
 
 #LandmarksNorthEast {
     float: right;
 }
+@media (max-width:768px){
+    #LandmarksNorthEast {
+        display: inline-block;
+        margin:0px;
+        margin-left: 0px;
+        float: none;
+}
+}
+
 
 #LandmarksEast {
     float: right;
@@ -25,7 +41,8 @@ body {
     #LandmarksEast {
           float: left;
 }
-    }
+}
+
 
 #Landmark {
     background-color: white;
@@ -42,6 +59,7 @@ body {
     border: 1px white solid;
 }
 
+
 #mainNav{
     clear: both;
     background-color: aquamarine;
@@ -50,7 +68,7 @@ body {
 }
 @media (max-width:768px){
     #mainNav {
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -59,12 +77,12 @@ body {
 }
 @media (min-width:768px){
     #mobileMainNav {
-        visibility: hidden;
+        display: none;
     }
 }
 @media (max-width:768px){
     #mobileMainNav {
-        visibility: visible;
+        display: block;
     }
 }
 
@@ -74,10 +92,10 @@ body {
     margin: auto;
 }
 
+
 #contentContainer {
     background-color: white;
     margin-top: 2px;
-    box-sizing: border-box;
-    height:100%;
+    height:90%;
 }
 
