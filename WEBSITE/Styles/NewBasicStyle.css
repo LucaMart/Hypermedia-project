@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(50,50,250);
+}
+
+#pageContainer {
+    margin-left:10%;
+    margin-right:10%;
+    height:100%;
+}
+
+#HomeLogo {
+    float: left;
+}
+
+#LandmarksNorthEast {
+    float: right;
+}
+
+#LandmarksEast {
+    float: right;
+}
+@media (max-width:992px){
+    #LandmarksEast {
+          float: left;
+}
+    }
+
+#Landmark {
+    background-color: white;
+    color: black;
+    font-family: DejaVu-Sans, Verdana, sans-serif;
+    padding: 3px;
+    border: blue 1px solid;
+    margin: 2px;
+}
+
+#Landmark:hover {
+    background-color: darkblue;
+    color: white;
+    border: 1px white solid;
+}
+
+#mainNav{
+    clear: both;
+    background-color: aquamarine;
+    width: 100%;
+    overflow: auto;
+}
+@media (max-width:768px){
+    #mainNav {
+        visibility: hidden;
+    }
+}
+
+#mobileMainNav{
+    background-color: aquamarine;
+}
+@media (min-width:768px){
+    #mobileMainNav {
+        visibility: hidden;
+    }
+}
+@media (max-width:768px){
+    #mobileMainNav {
+        visibility: visible;
+    }
+}
+
+#mobileMainNav .nav{
+    box-sizing: border-box;
+    width:90%;
+    margin: auto;
+}
+
+#contentContainer {
+    background-color: white;
+    margin-top: 2px;
+    box-sizing: border-box;
+    width:100%;
+}
+

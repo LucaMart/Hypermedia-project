@@ -5,9 +5,10 @@ body {
 
 #contentContainer {
     width:80%;
+    height: 100%;
     max-width: 1800px;
     margin: 0 auto;
-    
+    background-color: white;
 }
 
 header{
@@ -15,6 +16,7 @@ header{
     min-width: 100%;
     padding: 0px;
     margin: 0px;
+    background-color: blue;
 }
 
 #HomeLogo{
@@ -75,16 +77,16 @@ h1,h2,h3 {
 }
 
 h1 {
-    font-size: 20rem;
+    font-size: 20 rem;
 }
 h2 {
-    font-size: 18rem;
+    font-size: 18 em;
 }
 h3 {
-    font-size: 16rem;
+    font-size: 16 em;
 }
 
 p {
     font-family: Georgia Times-New-Roman serif;
-    font-size: 14rem;
+    font-size: 14 em;
 }
