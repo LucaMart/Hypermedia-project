@@ -96,6 +96,7 @@ header {
 #contentContainer {
     background-color: white;
     margin-top: 2px;
-    height:90%;
+    height:100%;
+    overflow: auto;
 }
 

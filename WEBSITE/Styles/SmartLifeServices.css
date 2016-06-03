@@ -1,0 +1,24 @@
+.CategorySection {
+    border-bottom: 1px black dashed;
+    height: 50%;
+}
+@media(max-width: 768px){
+    .CategorySection {
+        height: 25%;
+    }
+}
+
+#SLsymbol {
+    min-width: 70px;
+    max-width: 100px;
+    width: 40%;
+    border: 1px cyan solid;
+}
+
+
+.CategorySection img{
+    width: 30%;
+    display: inline-block;
+    border: 1px black solid;
+    margin: 2px;
+}
