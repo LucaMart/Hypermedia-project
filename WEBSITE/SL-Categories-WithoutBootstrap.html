@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>New Page Template</title>
+    <title>SmartLife Service Categories</title>
 
     <link rel="stylesheet" href="Styles/Reset.css">
     <link rel="stylesheet" href="Libraries&Resources/bootstrap.css">
@@ -10,7 +10,7 @@
     <script src="Libraries&Resources/bootstrap.min.js"> </script>
 
     <link rel="stylesheet" href="Styles/NewBasicStyle.css"/>
-    <link rel="stylesheet" href="Styles/SmartLifeServices.css"/>
+    <link rel="stylesheet" href="Styles/SmartLifeServicesWithoutBootstrap.css"/>
 </head>
 <body id="pageContainer">
     <!------------------------------------------------------------------->
@@ -35,42 +35,50 @@
     </nav>
     <!---------------------------------------------------------------------->
 
-    <div id="contentContainer">
-                <section class="CategorySection" id="TVSection">
-                     <h2>TV &amp; Entertainment <img id="SLsymbol" src="Images/SLServices/TV&Ent-Symbol.png"/></h2>
+    <table id="contentContainer">
+        <tr>
+                <td class="CategorySection" id="TVSection">
+                     <h2>
+                         TV &amp; Entertainment <img id="SLsymbol" src="Images/SLServices/TV&Ent-Symbol.png"/>
+                    </h2>
                     <div>
                         <img src="Images/SLServices/TV&Ent-Categories1.png"/>
                         <img src="Images/SLServices/TV&Ent-Categories2.png"/>
                     </div>
-                </section>
+                </td>
 
-                <section class="CategorySection" id="HealthSection">
-                     <h2 class="SLtitle">Health<img id="SLsymbol" src="Images/SLServices/Health-Symbol.png"/></h2>
+                <td class="CategorySection" id="HealthSection">
+                     <h2>
+                         Health<img id="SLsymbol" src="Images/SLServices/Health-Symbol.png"/>
+                    </h2>
                     <img src="Images/SLServices/Health-Categories1.png">
-                </section>
+                </td>
+        </tr>
+        <tr>
 
-                <section class="CategorySection" id="HomeSection">
+                <td class="CategorySection" id="HomeSection">
                     <div>
                         <h2>Home</h2>
                         <img id="SLsymbol" src="Images/SLServices/Home-Symbol.png"/>
                     </div>
                     <img src="Images/SLServices/Home-Categories1.png">
-                </section>
+                </td>
 
-                <section class="CategorySection" id="PersonSection">
+                <td class="CategorySection" id="PersonSection">
                    <div>
                         <h2>Person</h2>
                         <img id="SLsymbol" src="Images/SLServices/Person.png"/>
                     </div>
                     <img src="Images/SLServices/Person-Categories1.png">
-                </section>
-    </div>
+                </td>
+        </tr>
 
 
 
 
     <!----------------------------------------------------------------------->
-    <nav id="mobileMainNav">
+    <tr>
+        <td id="mobileMainNav">
         <ul class="nav navbar-nav" >
             <li> <a id="Landmark" href="#">PROMOTIONS</a> </li>
             <li> <a id="Landmark" href="#">DEVICES</a> </li>
@@ -83,6 +91,8 @@
             <li> <a id="Landmark" href="#">WHO WE ARE</a> </li>
             <li> <a id="Landmark" href="#">THE TIM GROUP</a> </li>
         </ul>
-    </nav>
+        </td>
+    </tr>
+    </table>
 </body>
 </html>
