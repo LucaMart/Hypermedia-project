@@ -5,6 +5,12 @@
     border-right: black 1px dashed;
 }
 
+@media (min-width:768px){
+    #HealthSection {
+        padding-top:4%;
+    }
+}
+
 @media (max-width:768px){
     #TVSection, #HomeSection, #HealthSection, #PersonSection{
         border: none;
@@ -29,6 +35,7 @@
 @media (max-width:600px){
     #SLsymbol {
          width:70px;
+         margin: 2px;
     }
 }
 
@@ -37,7 +44,7 @@
 }
 
 #TVImage {
-    width: 45%;
+    width: 40%;
 }
 @media (max-width:768px){
     #TVImage {
@@ -57,15 +64,15 @@
 #HomeImage {
     width: 100%;
 }
-@media (max-width:768px){
-    #HomeImage {
-        width: 90%;
-    }
- }
 
 #PersonImage {
     width: 100%;
 }
+@media (min-width:768px){
+    #PersonImage {
+        width: 80%;
+    }
+ }
 
 
 
