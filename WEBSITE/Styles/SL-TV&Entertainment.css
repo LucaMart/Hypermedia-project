@@ -1,0 +1,16 @@
+.SLCategoryHeader img, .SLCategoryHeader h2 {
+    display: inline-block;
+}
+
+.product img {
+    border: 1px grey dotted;
+    max-width: 100%;
+}
+
+.product a {
+    font-family: Georgia "Times New Roman" serif;
+    font-size: 1.2em ;
+    font-weight: bold;
+    color: darkblue;
+    text-decoration: underline;
+}
