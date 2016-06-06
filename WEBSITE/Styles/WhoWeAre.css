@@ -1,0 +1,43 @@
+#projectsDiv img, #testimonialsDiv img {
+    border: 3px solid blue;
+    display: block;
+    margin: 0 auto;
+}
+
+#projectsDiv img:hover, #testimonialsDiv img:hover{
+    border: 3px solid cyan;
+}
+
+
+#projectsDiv img {
+    margin: 15px auto;
+    max-width:90%;
+}
+
+#testimonialsDiv img {
+    max-width:80%;
+    margin: 5px auto;
+
+}
+
+#projectsTextDiv p , #testimonialsTextDiv p, #excellenceDiv p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#testimonialsTextDiv, #projectsTextDiv {
+    border: 1px black solid;
+    background-color: paleturquoise;
+    margin: 5px auto;
+}
+
+h3, h4 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 15px;
+}
