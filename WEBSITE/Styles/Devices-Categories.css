@@ -1,0 +1,36 @@
+.category .innerDiv img {
+    display: block;
+    border: none;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 60px;
+}
+
+.innerDiv a {
+    font-family: DejaVu-Sans, Verdana, sans-serif;
+    font-weight: bold;
+    color: darkblue;
+    text-decoration: underline;
+}
+
+.innerDiv {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.category {
+    margin: 15px auto;
+    padding-top: 20px;
+    border-top: 1px grey dotted;
+}
+
+.category img {
+    max-width: 80%;
+    display: block;
+    margin: 5px auto;
+}
+
+#TabletImage{
+    max-width: 70%;
+}
