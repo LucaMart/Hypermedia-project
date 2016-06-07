@@ -1,0 +1,47 @@
+#Breadcrumbs {
+    border-bottom: 1px solid darkblue;
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-style: italic;
+    margin: 0;
+}
+
+#productImageDiv img{
+    width: 80%;
+}
+
+#tabsDiv {
+    margin-top: 30px;
+}
+
+#productInfoDiv{
+    border: 1px grey dotted;
+    border-bottom: none;
+}
+
+#priceDiv {
+    padding: 5px;
+    margin: 5px;
+    border-top: 1px grey dotted;
+    text-align: center;
+}
+
+#priceDiv span {
+    display: inline-block;
+    font-weight: bold;
+    margin: 0 15%;
+}
+
+#productColors input {
+    display: inline-block;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+#productCharacteristics {
+    max-height: 100px;
+    overflow: auto;
+}
