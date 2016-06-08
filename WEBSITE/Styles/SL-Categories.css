@@ -1,0 +1,107 @@
+#HomeSection , #PersonSection {
+    border-top: black 1px dashed;
+}
+#TVSection, #HomeSection {
+    border-right: black 1px dashed;
+}
+
+@media (min-width:768px){
+    #HealthSection {
+        padding-top:4%;
+    }
+}
+
+@media (max-width:768px){
+    #TVSection, #HomeSection, #HealthSection, #PersonSection{
+        border: none;
+        border-bottom: black 1px dashed;
+    }
+}
+
+
+/*Images*/
+.CategorySection img{
+    display: inline-block;
+    border: none;
+    margin: 2px;
+}
+
+#SLsymbol {
+    width: 90px;
+    border-width: 4px;
+    border-color: cyan;
+    border-style: outset;
+}
+@media (max-width:600px){
+    #SLsymbol {
+         width:70px;
+         margin: 2px;
+    }
+}
+
+#SLsymbol:hover {
+    border-style: inset;
+}
+
+#TVImage {
+    width: 40%;
+}
+@media (max-width:768px){
+    #TVImage {
+        width: 30%;
+    }
+ }
+
+#HealthImage {
+    width: 80%;
+}
+@media (max-width:768px){
+    #HealthImage {
+        width: 50%;
+    }
+ }
+
+#HomeImage {
+    width: 100%;
+}
+
+#PersonImage {
+    width: 100%;
+}
+@media (min-width:768px){
+    #PersonImage {
+        width: 80%;
+    }
+ }
+
+
+
+/*Header text and organization*/
+.CategorySection h2 {
+    font-weight: bold;
+    color:indigo;
+}
+
+#TVSection h2{
+  display: inline-block;
+}
+#HealthSection h2{
+  display: inline-block;
+}
+
+
+@media (min-width:1200px){
+    .CategorySection h2 {
+        font-size: 1.9em;
+    }
+}
+@media (max-width:1200px){
+    .CategorySection h2 {
+        font-size: 1.7em;
+    }
+}
+@media (max-width:768px){
+    .CategorySection h2 {
+        font-size: 1.5em;
+    }
+}

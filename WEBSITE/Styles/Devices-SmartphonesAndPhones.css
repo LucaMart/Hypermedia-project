@@ -1,0 +1,59 @@
+#DeviceFiltersDiv {
+    border: 1px black solid;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+#minPriceNum, #maxPriceNum {
+    border: 1px solid gray;
+    margin: 5px;
+    width: 40%;
+
+}
+
+.device {
+    padding: 10px;
+    padding-top: 20px;
+    text-align: center;
+}
+@media (max-width: 768px){
+    .device {
+    border-top: 1px grey dotted;
+    }
+}
+
+.device img{
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    min-width: 60px;
+    max-width: 150px;
+}
+
+.device a {
+    text-decoration: underline;
+    color: blue;
+    font-family: Georgia "Times New Roman" serif;
+}
+
+.device p{
+    color: red;
+}
+
+
+#nextPageButtonsDiv a{
+    border: 1px blue solid;
+    padding: 4px;
+    background-color: lightgrey;
+
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.pageTitle{
+    text-align: center;
+}

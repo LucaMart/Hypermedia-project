@@ -1,0 +1,92 @@
+#Breadcrumbs {
+    border-bottom: 1px solid darkblue;
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-style: italic;
+    margin: 0;
+}
+
+#productImageDiv img{
+    width: 80%;
+}
+
+#tabsDiv {
+    margin-top: 30px;
+}
+
+#productInfoDiv{
+    border: 1px grey dotted;
+    border-bottom: none;
+}
+
+#priceDiv {
+    padding: 5px;
+    margin: 5px;
+    border-top: 1px grey dotted;
+    text-align: center;
+}
+
+#priceDiv span {
+    display: inline-block;
+    font-weight: bold;
+    margin: 0 15%;
+}
+
+#productColors input {
+    display: inline-block;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+#productCharacteristics {
+    max-height: 100px;
+    overflow: auto;
+}
+
+.tab-pane {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.imageInTab {
+    display: inline-block;
+    width: 30%;
+}
+
+#RelatedServices a {
+    display: inline-block;
+    margin: 4px 15px;
+    text-decoration: underline;
+    color: darkblue;
+    font-weight: bold;
+}
+
+#RelatedServices h4 {
+    margin: 10px 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+#RelatedServices h5 {
+    font-style: normal;
+    margin: 4px 10px;
+    color: mediumturquoise;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.nav-tabs li a{
+    background-color: rgb(200,230,255);
+}
+
+.nav-tabs li a:focus{
+    font-weight: bold;
+}
+
+.tab-pane {
+    padding: 10px;
+}
