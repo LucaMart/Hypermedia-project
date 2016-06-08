@@ -96,12 +96,6 @@ header {
 #contentContainer {
     background-color: white;
     margin-top: 2px;
-<<<<<<< HEAD
-    /*height:90%;*/
     overflow: hidden;
-=======
-    height:100%;
-    overflow: auto;
->>>>>>> 4ee1266717d5fe9488a643467a5f41d0bd69bc16
 }
 
