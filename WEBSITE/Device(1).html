@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TIM Vision</title>
+    <title>Samsung Galaxy S7</title>
 
     <link rel="stylesheet" href="Styles/Reset.css">
     <link rel="stylesheet" href="Libraries&Resources/bootstrap.css">
 
-    <script src="Libraries&Resources/jquery-2.2.3.min"> </script>
+    <script src="Libraries&Resources/jquery-2.2.3.min.js"> </script>
     <script src="Libraries&Resources/bootstrap.min.js"> </script>
 
     <link rel="stylesheet" href="Styles/NewBasicStyle.css"/>
@@ -77,12 +77,50 @@
             </div>
             <div class="row" id="tabsDiv">
                 <ul class="nav nav-tabs">
-                  <li class="active"><a href="#">Device Specifications</a></li>
-                  <li><a href="#">Included in the price</a></li>
-                  <li><a href="#">Related Services</a></li>
+                  <li class="active"><a data-toggle="tab" href="#Specifications">Device Specifications</a></li>
+                  <li><a data-toggle="tab" href="#IncludedInPrice">Included in the price</a></li>
+                  <li><a data-toggle="tab" href="#RelatedServices">Related Services</a></li>
                 </ul>
             </div>
 
+            <div class="tab-content">
+                <div id="Specifications" class="tab-pane fade active">
+                    <!--Contenuto vario, non strutturato-->
+                    <h5>Technology</h5>
+                    <p>4G Cat.9 etc.etc.</p>
+                    <h5>Connectivity</h5>
+                    <p>Wi Fi - Bluetooth - Micro USB - NFC</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at porta felis, a pulvinar risus. Praesent non luctus sapien. Duis fringilla dolor odio. Maecenas sed rhoncus tortor. Maecenas eget elementum felis. Quisque in volutpat arcu, vel convallis tortor. Proin nec mauris eu ipsum interdum venenatis. Nulla malesuada nulla id diam bibendum imperdiet.</p>
+                    <p>Ut dictum sagittis faucibus. Donec rhoncus velit augue, at mollis neque egestas nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut auctor ligula vitae ante ultrices varius. Vestibulum in fringilla elit. Nullam efficitur laoreet enim sed pellentesque. Mauris dignissim tellus at justo placerat porttitor. Donec id leo fringilla, mollis lectus eget, imperdiet massa. Ut dictum turpis ac tellus sodales, non commodo nibh euismod. Sed tempor metus sed posuere suscipit. Integer tortor mi, bibendum et laoreet a, aliquam porta massa. Sed nulla risus, facilisis vitae volutpat et, porta quis nunc. Donec egestas tellus ex, sed sollicitudin neque vehicula eu. Quisque vitae mauris ut augue accumsan sollicitudin nec a libero. Praesent sit amet lacus quis massa fringilla gravida vitae eu erat.</p>
+                    <p>Vestibulum elementum ligula a congue accumsan. Donec sit amet laoreet mi, eget dapibus risus. Suspendisse non metus vitae magna placerat commodo ut nec est. In scelerisque, enim nec aliquet sodales, diam nisi eleifend nunc, eget venenatis neque odio nec purus. Vivamus vel euismod turpis. Curabitur a erat et dolor congue ultricies id sit amet orci. Sed in ipsum quis metus ultrices imperdiet. Cras egestas felis vel arcu pretium, nec ornare magna volutpat. In sit amet placerat purus.</p>
+                </div>
+
+                <div id="IncludedInPrice" class="tab-pane fade">
+                    <!--Contenuto vario, non strutturato-->
+                    <h4>SoundBar - HWJ250</h4>
+                     <img class="imageInTab" src="Images/Devices/Soundbar-HWJ250.png"/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at porta felis, a pulvinar risus. Praesent non luctus sapien. Duis fringilla dolor odio. Maecenas sed rhoncus tortor. Maecenas eget elementum felis. Quisque in volutpat arcu, vel convallis tortor. Proin nec mauris eu ipsum interdum venenatis. Nulla malesuada nulla id diam bibendum imperdiet.</p>
+                    <h4>Subscription to the TIM Vision SmartLife Service</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at porta felis, a pulvinar risus. Praesent non luctus sapien. Duis fringilla dolor odio. Maecenas sed rhoncus tortor. Maecenas eget elementum felis. Quisque in volutpat arcu, vel convallis tortor. Proin nec mauris eu ipsum interdum venenatis. Nulla malesuada nulla id diam bibendum imperdiet.</p>
+                </div>
+
+                <div id="RelatedServices" class="tab-pane fade">
+                    <h4>SmartLife Services</h4>
+                    <h5>TV &amp; Entertainment</h5>
+                    <a href="#">TIM Reading</a>
+                    <a href="#">TIM Music</a>
+                    <a href="#">TIM Games</a>
+                    <h5>Person</h5>
+                    <a href="#">TIM Wallet - Payments</a>
+                    <a href="#">TIM Wallet - Transport Tickets</a>
+                    <a href="#">TIM Wallet - Fidelity Card</a>
+                    <a href="#">TIM Wallet - Coupons</a>
+                    <h4>Assistance Services</h4>
+                    <h5>TIM Reading</h5>
+                    <a href="#">Discover TIM Reading</a>
+                    <a href="#">Devices for TIM Reading</a>
+                </div>
+            </div>
 
         </div>
     </div>
