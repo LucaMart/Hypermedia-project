@@ -1,0 +1,94 @@
+#contentContainer{
+    padding: 1%;
+    text-align: center;
+}
+
+.cont{
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#inedxcontainer{
+    height: 65%;
+    width: 19%;
+    display: inline-block;
+    position: relative;
+}
+
+#servicecontainer{
+    height: 90%;
+    width: 80%;
+    float: right;
+}
+
+.title{
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    color: red;
+}
+
+.topic{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font-family: Verdana, sans-serif;
+    padding: 1%;
+    overflow: auto;
+}
+
+.topictitle{
+    font-weight: bold;
+    color: blue;   
+}
+
+.topictext{
+    font-family: Verdana, sans-serif;
+}
+
+#indexlist{
+    text-align: left;
+    padding-left: 2%;
+    font-family: Verdana, sans-serif;
+    text-decoration: underline;
+}
+
+.indexelement{
+    color: blue;
+}
+
+#faq{
+    background-color: white;
+    color: darkblue;
+    font-family: DejaVu-Sans, Verdana, sans-serif;
+    font-weight: bold;
+    padding: 3px;
+    border: black 1px solid;
+    margin: 2px;
+    width: 60%;
+    padding: 5%;
+    margin-left: -45%;
+    position: absolute;
+    bottom: 0px;
+}
+
+#button:link{
+    background-color: crimson;
+    color: white;
+    font-family: DejaVu-Sans, Verdana, sans-serif;
+    border: blue 1px solid;
+    display: inline-block;
+    text-decoration: none;
+    width: 15%;
+    padding: 1%;
+    margin-left:2%;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+#button:hover{
+    background-color: darkblue;
+}
+
+#button:visited{
+    color: white;
+}
