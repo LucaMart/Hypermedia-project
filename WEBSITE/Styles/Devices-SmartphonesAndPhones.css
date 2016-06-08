@@ -30,6 +30,8 @@ h5 {
     display: block;
     margin: 0 auto;
     max-width: 90%;
+    min-width: 60px;
+    max-width: 150px;
 }
 
 .device a {
@@ -50,4 +52,8 @@ h5 {
 
     display: inline-block;
     margin: 0 auto;
+}
+
+.pageTitle{
+    text-align: center;
 }
