@@ -69,6 +69,36 @@
     margin-left: -45%;
     position: absolute;
     bottom: 0px;
+    text-decoration: underline;
+}
+
+#faq:hover{
+    background-color: darkblue;
+    color: white;
+    border-color: white;
+    
+}
+
+#relateddev{
+    color: black;
+     border: blue 1px solid;
+}
+
+#relateddev:link{
+    background-color: lightblue;
+    color: black;
+    font-family: Verdana, sans-serif;
+    margin-left: 2.5%;
+    margin-top: 1%;
+    padding: 1%;
+    width: 15%;
+    display: block;
+    text-decoration: none;
+}
+
+#relateddev:hover{
+    background-color: darkblue;
+    color: white;
 }
 
 #button:link{
