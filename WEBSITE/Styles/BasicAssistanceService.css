@@ -80,8 +80,7 @@
 #faq:hover{
     background-color: darkblue;
     color: white;
-    border-color: white;
-    
+    border-color: white; 
 }
 
 #relateddev{
@@ -126,4 +125,32 @@
 
 #button:visited{
     color: white;
+}
+
+@media (max-width: 768px){
+    #inedxcontainer{
+        width: 100%;
+    }
+    
+    #servicecontainer{
+        width: 100%;
+    }
+    
+    #button:link , #relateddev:link{
+       width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+        padding: 5%;
+    }
+    
+    #container-fluid{
+        padding: 1%;
+        background-color: white;
+        height: auto;
+        min-height: auto;
+        overflow: hidden;   
+    }
+    #faq{
+        position: relative;
+    }
 }
