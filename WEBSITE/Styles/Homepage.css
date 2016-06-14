@@ -1,0 +1,217 @@
+.content{
+    /*border: 2px dotted gray;*/
+}
+
+#content1{
+    width: 40%;
+    float: left;
+    border-right: 2px dotted gray;
+}
+
+#content2{
+    width: 60%;
+    float: right;
+}
+
+.main{
+    padding-top: 5%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#main1t{
+    border-bottom: 2px dotted gray;
+}
+
+#main1b{
+    padding-left: 5%;
+}
+
+#main2t{
+    border-bottom: 2px dotted gray;
+}
+
+#main2m{
+    border-bottom: 2px dotted gray;
+}
+
+#main2b{
+    text-align: center;
+}
+
+.title{
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    color: royalblue;
+    display: inline;
+}
+
+#imgtitle{
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    color: darkblue;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.Button:link{
+    background-color: crimson;
+    color: white;
+    font-family: DejaVu-Sans, Verdana, sans-serif;
+    padding: 1%;
+    border: blue 1px solid;
+    margin: 1%;
+    display: inline-block;
+    bottom: 0px;
+    text-decoration: none;
+}
+
+.Button:visited{
+    color: white;
+}
+.Button:hover{
+    background-color: darkblue;
+}
+
+#TimVision{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%
+}
+
+.text{
+    font-family: DejaVu-Sans, sans-serif;
+    padding: 2%;
+}
+
+#grid{
+    width: 100%;
+}
+
+#cell{
+    border: 1px solid black;
+}
+@media screen and (max-width: 768px){
+
+    #content1, #content2{
+        float: left;
+        width: 100%;
+        border: none;
+    }
+
+    #main1b{
+        border-bottom: 2px dotted gray;
+    }
+}
+
+.homeimg{
+    width: 19%;
+}
+
+.homeimg2{
+    width: 45%;
+}
+
+.homeimg3{
+    width: 30%;
+    vertical-align: top;
+}
+
+.homeimg4{
+    width: 30%;
+
+}
+
+#caption{
+    width: 60%;
+    font-family: DejaVu-Sans, sans-serif;
+    display: inline-block;
+}
+
+#title{
+    display: inline-block;
+    width: 40%;
+}
+
+#title2{
+    display: inline-block;
+    width: 60%;
+}
+
+.Homeelement{
+    display: block;
+}
+
+#homelist{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+}
+
+#PappanoInWeb{
+    display: inline;
+}
+
+#PappanoLabel{
+    width: 30%;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#homeNews{
+    width: 60%;
+    display: inline-block;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+    vertical-align: middle;
+}
+
+#fromNews{
+    width: 100%;
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 921px){
+
+    #title, #title2{
+        width: 100%;
+        text-align: center;
+    }
+    .homeimg{
+        width: 30%;
+    }
+
+    .homeimg3{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    #homelist{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .Homeelement{
+        display: inline-block;
+        width: 40%;
+        margin-left: 5%;
+    }
+
+    #caption{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #PappanoLabel{
+        width: 100%;
+        text-align: center;
+
+    }
+
+}

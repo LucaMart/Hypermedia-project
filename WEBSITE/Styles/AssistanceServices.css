@@ -1,0 +1,49 @@
+#frow{
+    width: 100%;
+    vertical-align: center;
+}
+
+#rcol{
+    width: 50%;
+    float: right;
+}
+
+#lcol{
+    width: 50%;
+    float: left;
+}
+
+.tcontent{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.content{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.asimg{
+    width: 20%;
+    border: 3px solid aqua;
+}
+
+.title{
+    font-family: DejaVu-Sans, sans-serif;
+    font-weight: bold;
+    color: darkblue;
+}
+
+@media screen and (max-width: 768px){
+    #rcol, #lcol, .tcontent{
+        float: right;
+        width: 100%;
+    }
+
+}
