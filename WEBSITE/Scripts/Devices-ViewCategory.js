@@ -7,9 +7,9 @@ function loadPage(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/Devices-SmartphonesAndPhones.php", //Relative or absolute path to file.php file
+        url: "./PHP/Devices-ViewCategory.php", //Relative or absolute path to file.php file
         data: {
-            category : "Smartphones And Phones"
+            category : ourCategory
             },
 
         success: function(response) {

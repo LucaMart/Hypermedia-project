@@ -9,11 +9,12 @@
 
     <script src="Libraries&Resources/jquery-2.2.3.min.js"> </script>
     <script src="Libraries&Resources/bootstrap.min.js"> </script>
-    <script src="Scripts/Devices-SmartphonesAndPhones.js"> </script>
+    <script>var ourCategory="TV and SmartLiving"</script>
+    <script src="Scripts/Devices-ViewCategory.js"> </script>
 
 
     <link rel="stylesheet" href="Styles/NewBasicStyle.css"/>
-    <link rel="stylesheet" href="Styles/Devices-SmartphonesAndPhones.css"/>
+    <link rel="stylesheet" href="Styles/Devices-ViewCategory.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body id="pageContainer">
@@ -44,6 +45,7 @@
             <div class="row" id="mainReceiver">
                 <div id="DeviceFiltersDiv" class="col-xs-12 col-sm-3">
                     <form>
+                        <h4>Filters</h4>
                         <h5>Devices</h5>
                         <input type="radio" name="deviceType" value="all" checked> All </input><br/>
                         <input type="radio" name="deviceType" value="smartwatch"> Smartwatch </input><br/>
