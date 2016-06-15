@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 14, 2016 alle 21:23
+-- Creato il: Giu 15, 2016 alle 13:53
 -- Versione del server: 10.1.13-MariaDB
 -- Versione PHP: 7.0.6
 
@@ -188,11 +188,12 @@ CREATE TABLE `smartlifeservice` (
   `Name` varchar(63) NOT NULL,
   `Category` varchar(63) NOT NULL,
   `Subcategory` varchar(63) DEFAULT NULL,
-  `Description` text NOT NULL,
-  `Activation&Rules` text NOT NULL,
-  `Price` varchar(63) NOT NULL,
+  `Comment` text,
+  `Description` text,
+  `Activation&Rules` text,
+  `Price` varchar(63) DEFAULT NULL,
   `SLImagePath` varchar(255) NOT NULL,
-  `InPromotion` tinyint(1) NOT NULL,
+  `InPromotion` tinyint(1) DEFAULT NULL,
   `RelatedProductsImagePath` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -200,8 +201,20 @@ CREATE TABLE `smartlifeservice` (
 -- Dump dei dati per la tabella `smartlifeservice`
 --
 
-INSERT INTO `smartlifeservice` (`Name`, `Category`, `Subcategory`, `Description`, `Activation&Rules`, `Price`, `SLImagePath`, `InPromotion`, `RelatedProductsImagePath`) VALUES
-('TIM Vision', 'TV&Entertainment', NULL, 'With the TIMvision subscription you can choose between cartoons, movies, TV series, documentaries, music and the last seven days of the main RAI channels and La7.\r\nAnywhere, anytime.\r\nMore than 8,000 titles available, always on demand, to create your own schedule without commercial interruptions.\r\n\r\nThe other component of TIMVision is Videostore. Videostore is a rich video library from which you can rent or purchase the latest movies, series and cartoons.\r\n\r\nThe purchase or rental of the products included in the catalog is permitted from any fixed and mobile line.\r\nYou can pay online with credit cards Visa, Mastercard, American Express. Payment by mobile app on Tablet / Smartphone can be done with the remaining credit / TIM account or credit card.', 'How to subscribe\r\nYou can subscribe to the TIMVision Service:\r\n- from this site, adding it to the basket\r\n- from the mobile app\r\n- or in a TIM shop.\r\nIn case you use the TIMVision mobile app: Download it from the App Store and enter the "Membership" section. You can choose as payment the remaining credit or your credit card.\r\nCosts', '1€ + 5€/month', '...', 0, '...');
+INSERT INTO `smartlifeservice` (`Name`, `Category`, `Subcategory`, `Comment`, `Description`, `Activation&Rules`, `Price`, `SLImagePath`, `InPromotion`, `RelatedProductsImagePath`) VALUES
+('App SerieA TIM', 'TV&Entertainment', 'Football Serie A', NULL, NULL, NULL, NULL, 'Images/SLServices/Football1.png', NULL, NULL),
+('Chromecast', 'TV&Entertainment', 'TV', NULL, NULL, NULL, NULL, 'Images/SLServices/TV5.png', NULL, NULL),
+('E-Book Store di TIM', 'TV&Entertainment', 'TIM Reading', NULL, NULL, NULL, NULL, 'Images/SLServices/Reading3-4.png', NULL, NULL),
+('I love Games', 'TV&Entertainment', 'TIM Games', NULL, NULL, NULL, NULL, 'Images/SLServices/Games1-2.png', NULL, NULL),
+('I love Mags', 'TV&Entertainment', 'TIM Reading', NULL, NULL, NULL, NULL, 'Images/SLServices/Reading2-2bis.png', NULL, NULL),
+('Sfoglio Digitale', 'TV&Entertainment', 'TIM Reading', NULL, NULL, NULL, NULL, 'Images/SLServices/Reading1.png', NULL, NULL),
+('TIM Home Connect', 'Home', NULL, 'The ideal solution to manage all your domotic systems in your house; ranging from house protection systems, to temperature control, to monitoring services.', NULL, NULL, NULL, 'Images/SLServices/Home-TimHomeConnect.png', NULL, NULL),
+('TIM Music', 'TV&Entertainment', 'TIM Music', NULL, NULL, NULL, NULL, 'Images/SLServices/Music1.png', NULL, NULL),
+('TIM Netflix', 'TV&Entertainment', 'TV', NULL, NULL, NULL, NULL, 'Images/SLServices/TV3.png', NULL, NULL),
+('TIM Premium Online', 'TV&Entertainment', 'TV', NULL, NULL, NULL, NULL, 'Images/SLServices/TV4.png', NULL, NULL),
+('TIM Sky', 'TV&Entertainment', 'TV', NULL, NULL, NULL, NULL, 'Images/SLServices/TV2.png', NULL, NULL),
+('TIM Tag', 'Home', NULL, 'TIM Tag is the tool that keeps you informed on the location of your four-legged friend, and of your most cherished pets. \r\nFollow in real time his movements on your smartphone, without ever losing track of him!', NULL, NULL, NULL, 'Images/SLServices/Home-Categories1.png', NULL, NULL),
+('TIM Vision', 'TV&Entertainment', 'TV', NULL, '<h4>Description</h4>\n                    <p>With the TIMvision subscription you can choose between cartoons, movies, TV series, documentaries, music and the last seven days of the main RAI channels and La7.\n                    Anywhere, anytime.<br/>\n                    More than 8,000 titles available, always on demand, to create your own schedule without commercial interruptions.\n                    </p>\n                    <p>The other component of TIMVision is Videostore. Videostore is a rich video library from which you can rent or purchase the latest movies, series and cartoons.\n                    </p>\n                    <p>The purchase or rental of the products included in the catalog is permitted from any fixed and mobile line.<br/>\n                    You can pay online with credit cards Visa, Mastercard, American Express. Payment by mobile app on Tablet / Smartphone can be done with the remaining credit / TIM account or credit card.\n                    </p>', '<h4>Activation&amp;Rules</h4>\n                    <h5>How to subscribe</h5>\n                    <p>You can subscribe to the TIMVision Service:\n                        <br/>- from this site, adding it to the basket\n                        <br/>- from the mobile app\n                        <br/>- or in a TIM shop.\n                        <br/>In case you use the TIMVision mobile app: Download it from the App Store and enter the "Membership" section. You can choose as payment the remaining credit or your credit card.\n                    </p>\n                    <h5>Costs</h5>\n                    <p>Service costs: 1 € for the first month, then 5 € per month.<br/>\n                    The contract length is indefinite. If a customer wishes to terminate the contract, she must access the TIMVision app from mobile or TV, and use the specific function.</p>\n                    <h5>From where can I use the service?</h5>\n                    <p>Any TV, using the specific TIMVision Decoder.<br/>\n                        Smart TVs and Blu-rays (Samsung e LG). The site timvision.it. The TIMvision app for PC, Tablet e Smartphone.\n                        <br/>note: A subscription to the service is valid for up to 6 devices.\n                    </p>', '1&euro; + 5&euro;/month', 'Images/SLServices/TV-TimVision1.jpg', 0, 'Images/SLServices/TV1.png');
 
 -- --------------------------------------------------------
 
@@ -267,6 +280,12 @@ ALTER TABLE `faquestion`
 -- Indici per le tabelle `project`
 --
 ALTER TABLE `project`
+  ADD PRIMARY KEY (`Name`);
+
+--
+-- Indici per le tabelle `smartlifeservice`
+--
+ALTER TABLE `smartlifeservice`
   ADD PRIMARY KEY (`Name`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
