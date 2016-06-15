@@ -30,7 +30,7 @@ function loadPage(){
                 listOfDevicesDivs+=
                     "<div class= \"device col-xs-12 col-sm-3\">"+
                     "<img src=\""+imagePath+"\">"+"</img>"+
-                    "<a href=\"#\">"+name+"</a>"+
+                    "<a href=\"Device.html?device="+name+"\""+">"+name+"</a>"+
                     "<p>"+price+"</p>"+
                     "</div>";
 
