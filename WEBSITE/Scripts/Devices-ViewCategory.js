@@ -26,7 +26,7 @@ function loadPage(){
                 var price = devices[i].Price;
                 var imagePath = devices[i].ImagePath;
 
-                console.log(name); console.log(price); console.log(imagePath);
+                console.log(name);
 
                 listOfDevicesDivs+=
                     "<div class= \"device col-xs-12 col-sm-3\">"+

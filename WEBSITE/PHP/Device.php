@@ -15,7 +15,8 @@ col=".$var." ORDER BY id DESC GROUP BY….
 $deviceName = $_POST["deviceName"];
 $deviceName = str_replace("%20"," ",$deviceName);
 
-$query = "SELECT Name,ImagePath,Characteristics,Price,Vendor,Model FROM device WHERE Name='$deviceName'";
+$query = "SELECT Name,ImagePath,Characteristics,Price,Vendor,Model,Specifications,IncludedInThePrice FROM device WHERE Name='$deviceName'";
+
 
 $result = $connection->query($query);
 
