@@ -24,6 +24,8 @@ function loadPage(){
             var imagePath = device[0].imagePath;
             var characteristics = device[0].Characteristics;
             var price= device[0].Price;
+            var vendor = device[0].Vendor;
+            var model = device[0].Model;
 
 
             $('#productName').html(name);
@@ -32,7 +34,11 @@ function loadPage(){
 
             $('#priceDiv').html(
                 "<span>"+price+"</span>"+
-                 "<input type=\"button\" value=\"Add to Basket\" onclick=\" \"/>")
+                 "<input type=\"button\" value=\"Add to Basket\" onclick=\" \"/>");
+
+            $('#productVendorAndModel').html(
+                "<p><span>"+vendor+"</span>&nbsp;:&nbsp;<span>"+model+"</span></p>");
+
 
 
         },
