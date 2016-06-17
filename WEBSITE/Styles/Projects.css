@@ -1,0 +1,19 @@
+.projectDiv img{
+    width:22%;
+    float: left;
+}
+
+@media(max-width:768px){
+   .projectDiv img{
+        width:40%;
+    }
+}
+
+.projectDiv{
+    border: 1px grey dotted;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+}
