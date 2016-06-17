@@ -4,13 +4,19 @@ $(document).ready(loadPage);
 function loadPage(){
     var id=1;
 
+    ourDevice = ourDevice.replace(/%20/g," ");
+
+    var queryDevice="SELECT Name,ImagePath,Characteristics,Price,Vendor,Model,Specifications,IncludedInThePrice FROM device WHERE Name="+"\""+ourDevice+"\"";
+    var querySL="SELECT DSL.`Device-Name`, DSL.`SLService-Name` AS SLName, SLS.Category as SLCategory FROM `devices-relatedsl` AS DSL, smartlifeservice as SLS WHERE `Device-Name`=\""+ourDevice+"\" and DSL.`SLService-Name`=SLS.Name";
+    var queryAS= "SELECT `AssistanceService-ID`,Name AS ASName, Category as ASCategory, SubCategory AS ASsubcategory FROM `devices-relatedas`, assistanceservice WHERE `Device-Name`=\""+ourDevice+"\" and `devices-relatedas`.`AssistanceService-ID`=assistanceservice.ID";
+
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
         url: "./PHP/Device.php", //Relative or absolute path to file.php file
         data: {
-            deviceName : ourDevice
+            query : queryDevice
             },
 
         success: function(response) {
@@ -60,9 +66,9 @@ function loadPage(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/DeviceSmartLifeServices.php", //Relative or absolute path to file.php file
+        url: "./PHP/Device.php", //Relative or absolute path to file.php file
         data: {
-            deviceName : ourDevice
+            query: querySL
             },
 
         success: function(response) {
@@ -94,9 +100,9 @@ function loadPage(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/DeviceAssistanceServices.php", //Relative or absolute path to file.php file
+        url: "./PHP/Device.php", //Relative or absolute path to file.php file
         data: {
-            deviceName : ourDevice
+            query: queryAS
             },
 
         success: function(response) {
