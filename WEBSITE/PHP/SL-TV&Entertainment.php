@@ -12,7 +12,10 @@ SELECT * FROM device WHERE
 col=".$var." ORDER BY id DESC GROUP BY….
 */
 
-$query = "SELECT Name,Category FROM device";
+$chosenCategory = $_POST["category"];
+
+$query = "SELECT Name,Category,Subcategory,SLImagePath FROM smartlifeservice WHERE Category='$chosenCategory'";
+
 
 $result = $connection->query($query);
 

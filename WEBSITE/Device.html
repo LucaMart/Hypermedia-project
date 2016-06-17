@@ -8,6 +8,11 @@
 
     <script src="Libraries&Resources/jquery-2.2.3.min.js"> </script>
     <script src="Libraries&Resources/bootstrap.min.js"> </script>
+    <script>
+       var array1 = location.search.split("=");
+       var ourDevice = array1[1];
+       console.log(ourDevice);
+    </script>
     <script src="Scripts/Device.js"> </script>
 
     <link rel="stylesheet" href="Styles/NewBasicStyle.css"/>
@@ -46,32 +51,30 @@
             </div>
             <div class="row">
                 <div id="productImageDiv" class="col-xs-12 col-sm-push-1 col-sm-5 col-lg-push-2 col-lg-4">
-                    <img src="Images/Devices/Smartphone e telefoni/SAMSUNG_S7_Black_02.png"/>
+
                 </div>
                 <div id="productInfoDiv" class="col-xs-12 col-sm-push-1 col-sm-5 col-lg-push-2 col-lg-4">
-                    <h4 id="productName">Samsung Galaxy S7</h4>
+                    <h4 id="productName"><!--Samsung Galaxy S7--></h4>
 
                     <h5>Vendor &amp; Model :</h5>
-                    <div id="productVendor&Model">
-                        <p><span>Samsung</span>&nbsp;:&nbsp;<span>Smartphone Galaxy S7 Edge</span></p>
+                    <div id="productVendorAndModel">
+
                     </div>
 
                     <h5>Characteristics : </h5>
                     <div id="productCharacteristics">
-                        <p>Android OS 6.0 <br/>
-                        Display 5.5 <br/>
-                        OctaCore CPU <br/></p>
+
                     </div>
 
-                    <h5>Available Colors : </h5>
+                    <!--<h5>Available Colors : </h5>
                     <div id="productColors">
                         <input type="button" style="background-color: red" onclick="" />
                         <input type="button" style="background-color: blue" onclick="" />
                         <input type="button" style="background-color: grey" onclick="" />
-                    </div>
+                    </div>-->
 
                     <div id="priceDiv">
-                        <span>729,90 E</span>
+
                         <input type="button" value="Add to Basket" onclick=""/>
                     </div>
                 </div>
@@ -86,27 +89,15 @@
 
             <div class="tab-content">
                 <div id="Specifications" class="tab-pane fade active">
-                    <!--Contenuto vario, non strutturato-->
-                    <h5>Technology</h5>
-                    <p>4G Cat.9 etc.etc.</p>
-                    <h5>Connectivity</h5>
-                    <p>Wi Fi - Bluetooth - Micro USB - NFC</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at porta felis, a pulvinar risus. Praesent non luctus sapien. Duis fringilla dolor odio. Maecenas sed rhoncus tortor. Maecenas eget elementum felis. Quisque in volutpat arcu, vel convallis tortor. Proin nec mauris eu ipsum interdum venenatis. Nulla malesuada nulla id diam bibendum imperdiet.</p>
-                    <p>Ut dictum sagittis faucibus. Donec rhoncus velit augue, at mollis neque egestas nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut auctor ligula vitae ante ultrices varius. Vestibulum in fringilla elit. Nullam efficitur laoreet enim sed pellentesque. Mauris dignissim tellus at justo placerat porttitor. Donec id leo fringilla, mollis lectus eget, imperdiet massa. Ut dictum turpis ac tellus sodales, non commodo nibh euismod. Sed tempor metus sed posuere suscipit. Integer tortor mi, bibendum et laoreet a, aliquam porta massa. Sed nulla risus, facilisis vitae volutpat et, porta quis nunc. Donec egestas tellus ex, sed sollicitudin neque vehicula eu. Quisque vitae mauris ut augue accumsan sollicitudin nec a libero. Praesent sit amet lacus quis massa fringilla gravida vitae eu erat.</p>
-                    <p>Vestibulum elementum ligula a congue accumsan. Donec sit amet laoreet mi, eget dapibus risus. Suspendisse non metus vitae magna placerat commodo ut nec est. In scelerisque, enim nec aliquet sodales, diam nisi eleifend nunc, eget venenatis neque odio nec purus. Vivamus vel euismod turpis. Curabitur a erat et dolor congue ultricies id sit amet orci. Sed in ipsum quis metus ultrices imperdiet. Cras egestas felis vel arcu pretium, nec ornare magna volutpat. In sit amet placerat purus.</p>
+
                 </div>
 
                 <div id="IncludedInPrice" class="tab-pane fade">
-                    <!--Contenuto vario, non strutturato-->
-                    <h4>SoundBar - HWJ250</h4>
-                     <img class="imageInTab" src="Images/Devices/Soundbar-HWJ250.png"/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at porta felis, a pulvinar risus. Praesent non luctus sapien. Duis fringilla dolor odio. Maecenas sed rhoncus tortor. Maecenas eget elementum felis. Quisque in volutpat arcu, vel convallis tortor. Proin nec mauris eu ipsum interdum venenatis. Nulla malesuada nulla id diam bibendum imperdiet.</p>
-                    <h4>Subscription to the TIM Vision SmartLife Service</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at porta felis, a pulvinar risus. Praesent non luctus sapien. Duis fringilla dolor odio. Maecenas sed rhoncus tortor. Maecenas eget elementum felis. Quisque in volutpat arcu, vel convallis tortor. Proin nec mauris eu ipsum interdum venenatis. Nulla malesuada nulla id diam bibendum imperdiet.</p>
+
                 </div>
 
                 <div id="RelatedServices" class="tab-pane fade">
-                    <h4>SmartLife Services</h4>
+                    <!--<h4>SmartLife Services</h4>
                     <h5>TV &amp; Entertainment</h5>
                     <a href="#">TIM Reading</a>
                     <a href="#">TIM Music</a>
@@ -119,7 +110,7 @@
                     <h4>Assistance Services</h4>
                     <h5>TIM Reading</h5>
                     <a href="#">Discover TIM Reading</a>
-                    <a href="#">Devices for TIM Reading</a>
+                    <a href="#">Devices for TIM Reading</a>-->
                 </div>
             </div>
 
