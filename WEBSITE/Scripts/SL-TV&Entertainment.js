@@ -7,7 +7,7 @@ function loadPage(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/SL-TV&Entertainment.php", //Relative or absolute path to file.php file
+        url: "./PHP/SL-ViewCategory.php", //Relative or absolute path to file.php file
         data: {
             category : "TV&Entertainment"
             },
@@ -32,7 +32,7 @@ function loadPage(){
                 if (subcategory=="TV"){
                 tvServices+=
                     "<div class=\"product col-xs-12 col-md-push-1 col-md-2\">"+
-                    "<a href=\"#\">"+name+"</a>"+
+                    "<a href=\"SmartLifeService.html?service="+name+"\""+">"+name+"</a>"+
                     "<img src=\""+imagePath+"\"/>"+
                     "</div>";
                 }
@@ -40,7 +40,7 @@ function loadPage(){
                 if (subcategory=="TIM Reading"){
                     readingServices+=
                         "<div class=\"product col-xs-12 col-sm-push-1 col-sm-3\">"+
-                        "<a href=\"#\">"+name+"</a>"+
+                        "<a href=\"SmartLifeService.html?service="+name+"\""+">"+name+"</a>"+
                         "<img src=\""+imagePath+"\"/>"+
                         "</div>";
                 }
@@ -48,7 +48,7 @@ function loadPage(){
                 {
                     otherServices+=
                         "<div class=\"product col-xs-12 col-sm-push-1 col-sm-3\">"+
-                        "<a href=\"#\">"+name+"</a>"+
+                        "<a href=\"SmartLifeService.html?service="+name+"\""+">"+name+"</a>"+
                         "<img src=\""+imagePath+"\"/>"+
                         "</div>";
                 }
