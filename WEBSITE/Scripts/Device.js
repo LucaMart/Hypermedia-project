@@ -56,4 +56,72 @@ function loadPage(){
         }
     });
 
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        //crossDomain: true, //localhost purposes
+        url: "./PHP/DeviceSmartLifeServices.php", //Relative or absolute path to file.php file
+        data: {
+            deviceName : ourDevice
+            },
+
+        success: function(response) {
+            var SLServices = JSON.parse(response);
+            console.log(JSON.parse(response));
+            console.log("Response parsed successfully");
+            var name; var category;
+
+            $('#RelatedServices').append("<h4>SmartLife Services</h4>");
+
+            for(var i=0; i<SLServices.length; i++){
+                name= SLServices[i].SLName;
+                category= SLServices[i].SLCategory;
+
+                $('#RelatedServices').append(category+" : "+ "<a href=\"#\">"+name+"</a><br/>");
+            }
+
+
+            },
+        error: function(request,error)
+        {
+            console.log(error);
+        }
+    });
+
+
+
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        //crossDomain: true, //localhost purposes
+        url: "./PHP/DeviceAssistanceServices.php", //Relative or absolute path to file.php file
+        data: {
+            deviceName : ourDevice
+            },
+
+        success: function(response) {
+            var assistanceServices = JSON.parse(response);
+            console.log(JSON.parse(response));
+            console.log("Response parsed successfully");
+            var name; var category; var subcategory;
+
+            $('#RelatedServices').append("<h4>Assistance Services</h4>");
+
+            for(var i=0; i<assistanceServices.length; i++){
+                name= assistanceServices[i].ASName;
+                category= assistanceServices[i].ASCategory;
+                subcategory= assistanceServices[i].ASsubcategory;
+
+                $('#RelatedServices').append(category+" : "+subcategory+" : "+"<a href=\"#\">"+name+"</a><br/>");
+            }
+
+
+
+            },
+        error: function(request,error)
+        {
+            console.log(error);
+        }
+    });
+
 }
