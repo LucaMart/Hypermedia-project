@@ -7,8 +7,7 @@ if (mysqli_connect_errno()){
     exit();
 }
 
-$query = "SELECT Name,imagePath,Content FROM project";
-
+$query = $_POST['query'];
 
 $result = $connection->query($query);
 

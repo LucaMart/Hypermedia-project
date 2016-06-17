@@ -2,12 +2,16 @@ $(document).ready(loadPage);
 
 function loadPage(){
     var id=1;
+    var queryProjects="SELECT Name,imagePath,Content FROM project";
 
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/Projects.php", //Relative or absolute path to file.php file
+        url: "./PHP/WhoWeAre.php", //Relative or absolute path to file.php file
+        data: {
+            query : queryProjects
+            },
 
         success: function(response) {
 

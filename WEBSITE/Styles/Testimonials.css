@@ -1,0 +1,21 @@
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.testimonialDiv {
+    text-align: center;
+}
+
+.testimonialDiv img {
+    max-width: 90%;
+}
+
+@media (max-width:768px){
+    h2 {
+        font-size: 1.6em;
+    }
+    h3 {
+        font-size:1.3em;
+    }
+}
