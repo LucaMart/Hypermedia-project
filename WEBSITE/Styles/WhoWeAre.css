@@ -26,8 +26,8 @@
 }
 
 #testimonialsTextDiv, #projectsTextDiv {
-    border: 1px black solid;
-    background-color: paleturquoise;
+    border: 1px black dotted;
+    background-color: rgb(200,240,255);
     margin: 5px auto;
 }
 
