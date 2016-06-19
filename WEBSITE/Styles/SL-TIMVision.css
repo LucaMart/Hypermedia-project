@@ -71,15 +71,19 @@ h3{
      text-align: center;
 }
 
-#imageLink{
+#productsLink{
     display: block;
     max-width: 80%;
     margin: 0 auto;
-    border: 2px darkred solid;
     margin-bottom: 5px;
 }
 
-#imageLink:hover{
+#linkImage{
+    border: 2px darkred solid;
+    max-width: 100%;
+}
+
+#linkImage:hover {
     border: 2px red solid;
 }
 

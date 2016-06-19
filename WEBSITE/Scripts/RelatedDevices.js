@@ -3,15 +3,14 @@ $(document).ready(loadPage);
 function loadPage(){
     var id=1;
 
-    //READ THE VARIABLES ourType and ourServiceIdentifier FROM LOCAL STORAGE
-
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
         url: "./PHP/RelatedDevices.php", //Relative or absolute path to file.php file
         data: {
-            //SEND: type: ourType, serviceIdentifier: ourServiceIdentifier
+            type: sessionStorage.getItem("ourType"),
+            serviceIdentifier: sessionStorage.getItem("ourServiceIdentifier")
             },
 
         success: function(response) {
@@ -20,11 +19,12 @@ function loadPage(){
             console.log(JSON.parse(response));
             var devices = JSON.parse(response);
             console.log("Response parsed successfully");
+            var listOfDevicesDivs="";
 
             for(var i=0;i<devices.length;i++){
                 var name = devices[i].Name;
                 var price = devices[i].Price;
-                var imagePath = devices[i].ImagePath;
+                var imagePath = devices[i].imagePath;
 
                 console.log(name);
 

@@ -11,11 +11,12 @@ $serviceType=$_POST["type"];
 $serviceIdentifier=$_POST["serviceIdentifier"];
 
 if ($serviceType == "AssistanceService") {
-    $query = "SELECT `Device-Name`,imagePath,Price FROM `devices-relatedas`,device WHERE `Device-Name`=Name and `assistanceservice-ID`='$serviceIdentifier'";
+    $query = "SELECT `Device-Name` AS Name,D.imagePath,D.Price FROM `devices-relatedas` AS DAS,device AS D WHERE `Device-Name`=Name and `assistanceservice-ID`='$serviceIdentifier'";
 }
 if ($serviceType == "SmartLifeService") {
-    $query = "SELECT `Device-Name`,imagePath,Price FROM `devices-relatedsl`,device WHERE `Device-Name`=Name and `SLService-Name`='$serviceIdentifier'";
+    $query = "SELECT `Device-Name` AS Name,D.imagePath,D.Price FROM `devices-relatedsl` AS DSL,device AS D WHERE `Device-Name`=Name and `SLService-Name`='$serviceIdentifier'";
 }
+
 
 
 
