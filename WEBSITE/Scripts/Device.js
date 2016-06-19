@@ -6,7 +6,7 @@ function loadPage(){
 
     ourDevice = ourDevice.replace(/%20/g," ");
 
-    var queryDevice="SELECT Name,ImagePath,Characteristics,Price,Vendor,Model,Specifications,IncludedInThePrice FROM device WHERE Name="+"\""+ourDevice+"\"";
+    var queryDevice="SELECT Name,ImagePath,Characteristics,Price,Vendor,Model,Specifications,IncludedInThePrice,Colors FROM device WHERE Name="+"\""+ourDevice+"\"";
     var querySL="SELECT DSL.`Device-Name`, DSL.`SLService-Name` AS SLName, SLS.Category as SLCategory FROM `devices-relatedsl` AS DSL, smartlifeservice as SLS WHERE `Device-Name`=\""+ourDevice+"\" and DSL.`SLService-Name`=SLS.Name";
     var queryAS= "SELECT `AssistanceService-ID`,Name AS ASName, Category as ASCategory, SubCategory AS ASsubcategory FROM `devices-relatedas`, assistanceservice WHERE `Device-Name`=\""+ourDevice+"\" and `devices-relatedas`.`AssistanceService-ID`=assistanceservice.ID";
 
@@ -34,6 +34,7 @@ function loadPage(){
             var model = device[0].Model;
             var includedDiv = device[0].IncludedInThePrice;
             var specsDiv = device[0].Specifications;
+            var colors = device[0].Colors;
 
             console.log(specsDiv);
 
@@ -53,7 +54,18 @@ function loadPage(){
 
             $('#Specifications').html(specsDiv);
 
+            if (colors!=null){
+                var el = "<div id=\"productColors\"><h5>Available Colors : </h5>";
 
+                var colorsArray = colors.split("-");
+                for (var i=0; i<colorsArray.length; i++){
+                    el+= "<input type=\"button\" style=\"background-color:"+colorsArray[i]+"\" onclick=\"\" />";
+                }
+                el += "</div>"
+                $('#colorsDiv').html(el);
+            }
+
+            $('.toClick').click();
 
         },
         error: function(request,error)
