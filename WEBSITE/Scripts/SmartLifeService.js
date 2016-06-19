@@ -23,8 +23,29 @@ function loadPage(){
             console.log("Response parsed successfully");
 
             var name = SLService[0].Name;
-            var descriptionDiv = SLService[0].Description;
-            console.log(name); console.log(descriptionDiv);
+            var description = SLService[0].Description;
+            var actAndRules = SLService[0].ActivationAndRules;
+            var imagePath = SLService[0].SLImagePath;
+            var productsImage = SLService[0].RelatedProductsImagePath;
+            console.log(name);
+
+            $('#Description').append(description);
+            $('#ActivationAndRules').append(actAndRules);
+
+            var div2= "<div>"
+                            +"<img id=\"promo\" src=\""+imagePath+"\"/>"
+                            +"<input type=\"button\" onclick=\"\" value=\"Add to Basket\"/>"
+                        +"</div>";
+            if (productsImage!=null){
+                div2 = div2 +
+                        "<div id=\"RelatedProductsDiv\">"
+                            +"<h4>Related Products</h4>"
+                            +"<img id=\"imageLink\" href=\"#\" src=\""+productsImage+"\"/>"
+                        +"</div>";
+            }
+
+            $('#mobileDiv').html(div2);
+            $('#sideDiv').html(div2);
 
         },
         error: function(request,error)
