@@ -42,7 +42,6 @@ function loadPage(){
         },
         error: function(request,error)
         {
-            $('#mainReceiver').append(request.status);
             console.log(error);
         }
     });
