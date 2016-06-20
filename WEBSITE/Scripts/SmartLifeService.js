@@ -40,12 +40,26 @@ function loadPage(){
                 div2 = div2 +
                         "<div id=\"RelatedProductsDiv\">"
                             +"<h4>Related Products</h4>"
-                            +"<img id=\"imageLink\" href=\"#\" src=\""+productsImage+"\"/>"
+                            +"<a id=\"productsLink\" href=\"RelatedDevices.html\">"
+                            +"<img id=\"linkImage\" src=\""+productsImage+"\"/></a>"
                         +"</div>";
             }
 
             $('#mobileDiv').html(div2);
             $('#sideDiv').html(div2);
+
+            if (typeof(Storage) == "undefined" ) {
+                alert("Your browser does not support HTML5 localStorage. Try upgrading.");
+            }
+            else {
+                console.log("Both localStorage and sessionStorage support is there.");
+        }
+
+        sessionStorage.setItem("ourType","SmartLifeService");
+        sessionStorage.setItem("ourServiceIdentifier",ourService);
+
+        console.log(sessionStorage.getItem("ourType"));
+        console.log(sessionStorage.getItem("ourServiceIndentifier"));
 
         },
         error: function(request,error)
@@ -55,3 +69,9 @@ function loadPage(){
     });
 
 }
+
+$('#productsLink').click(function(){
+
+
+
+});
