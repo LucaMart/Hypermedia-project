@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Page Template</title>
+
+    <link rel="stylesheet" href="Styles/Reset.css">
+    <link rel="stylesheet" href="Libraries&Resources/bootstrap.css">
+
+    <script src="Libraries&Resources/jquery-2.2.3.min.js"> </script>
+    <script src="Libraries&Resources/bootstrap.min.js"> </script>
+    <script>
+        var info = window.location.search;
+        var id = info.substring(1, info.length);
+    </script>
+    <script src="Scripts/AssistanceTopic.js"></script>
+    
+    <link rel="stylesheet" href="Styles/NewBasicStyle.css"/>
+    <link rel="stylesheet" href="Styles/BasicAssistanceService.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body id="pageContainer">
+    <!------------------------------------------------------------------->
+    <header>
+         <img id="HomeLogo" src="Images/logo.png"  href="#" style=""/>
+         <ul class="nav navbar-nav" id="LandmarksNorthEast">
+             <li><a id="Landmark" href="#">SHOPPING BASKET</a></li>
+             <li><a id="Landmark" href="#">CONTACT US</a></li>
+        </ul>
+    </header>
+    <nav id="mainNav">
+        <ul class="nav navbar-nav" >
+            <li> <a id="Landmark" href="#">PROMOTIONS</a> </li>
+            <li> <a id="Landmark" href="#">DEVICES</a> </li>
+            <li> <a id="Landmark" href="#">ASSISTANCE SERVICES</a> </li>
+            <li> <a id="Landmark" href="#">SMART LIFE SERVICES</a> </li>
+      </ul>
+        <ul id="LandmarksEast" class="nav navbar-nav">
+            <li ><a id="Landmark" href="#">WHO WE ARE</a></li>
+            <li ><a id="Landmark" href="#">THE TIM GROUP</a></li>
+      </ul>
+    </nav>
+    <!---------------------------------------------------------------------->
+
+    <div id="container-fluid" style="">
+        <h2 id="title" class="title"></h2>
+        <div class="cont" id="inedxcontainer">
+            <h4 class="title">Index</h4>
+            <ul id="indexlist">
+            </ul>
+                <a id="faq" href="#">FAQ</a>
+        </div>
+        <div class="cont" id="servicecontainer">
+        </div>
+        <a id="button" href="#"></a>
+        <a id="relateddev" href="#">Related Products</a>
+        
+    </div>
+
+
+
+
+    <!----------------------------------------------------------------------->
+    <nav id="mobileMainNav">
+        <ul class="nav navbar-nav" >
+            <li> <a id="Landmark" href="#">PROMOTIONS</a> </li>
+            <li> <a id="Landmark" href="#">DEVICES</a> </li>
+        </ul>
+        <ul class="nav navbar-nav" >
+            <li> <a id="Landmark" href="#">ASSISTANCE SERVICES</a> </li>
+            <li> <a id="Landmark" href="#">SMART LIFE SERVICES</a> </li>
+        </ul>
+        <ul class="nav navbar-nav" >
+            <li> <a id="Landmark" href="#">WHO WE ARE</a> </li>
+            <li> <a id="Landmark" href="#">THE TIM GROUP</a> </li>
+        </ul>
+    </nav>
+</body>
+</html>
