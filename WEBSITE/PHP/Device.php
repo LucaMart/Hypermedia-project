@@ -9,7 +9,7 @@ if (mysqli_connect_errno()){
 
 $deviceName = $_POST["deviceName"];
 
-$query = "SELECT Name,ImagePath,Characteristics,Price,Vendor,Model,Specifications,IncludedInThePrice FROM device WHERE Name='$deviceName'";
+$query = "SELECT Name,ImagePath,Characteristics,Price,Vendor,Model,Specifications,IncludedInThePrice,Colors FROM device WHERE Name='$deviceName'";
 
 
 $result = $connection->query($query);

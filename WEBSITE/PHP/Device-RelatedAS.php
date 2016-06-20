@@ -10,7 +10,7 @@ if (mysqli_connect_errno()){
 $deviceName = $_POST["device"];
 //$deviceName = str_replace("%20"," ",$deviceName);
 
-$query = "SELECT `AssistanceService-ID`,Name AS ASName, Category as ASCategory, SubCategory AS ASsubcategory FROM `devices-relatedas`, assistanceservice WHERE `Device-Name`='$deviceName' and `devices-relatedas`.`AssistanceService-ID`=assistanceservice.ID;
+$query = "SELECT `AssistanceService-ID`,Name AS ASName, Category as ASCategory, SubCategory AS ASsubcategory FROM `devices-relatedas`, assistanceservice WHERE `Device-Name`='$deviceName' and `devices-relatedas`.`AssistanceService-ID`=assistanceservice.ID";
 
 $result = $connection->query($query);
 
