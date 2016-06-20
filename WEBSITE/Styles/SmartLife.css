@@ -27,6 +27,7 @@
 
 .element{
     font-family: DejaVu-sans, sans-serif;
+    color: blue;
     font-weight: bold;
     text-align: left;
     text-decoration: underline;

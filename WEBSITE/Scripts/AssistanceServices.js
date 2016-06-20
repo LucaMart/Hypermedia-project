@@ -10,30 +10,28 @@ function fun(){
                 var i;
                 var lcol = "<div id=\"lcol\">";
                 var rcol = "<div id=\"rcol\">";
-                //TODO Highlgiths
                 for (i = 0; i < categories.length; i++){    
-                    //var imgPath = categories[i].;
-                    //var link = categories[i].;
                     var title = categories[i].Category;
+                    var id = categories[i].ID;
+                    var imagePath = "Images/Assistance services/Categories/"+title+".png";
                     if(i%2){
                         rcol+="<div class=\"content\">";
-                        rcol+="<img class=\"asimg\" src=\"\" href=\"#\"/>";
+                        rcol+="<img class=\"asimg\" src=\""+imagePath+"\" href=\"#\"/>";
                         rcol+="<p class=\"title\">"+title+"</p>";
                         rcol+="</div>";
                     }else{
                         lcol+="<div class=\"content\">";
-                        lcol+="<img class=\"asimg\" src=\"\" href=\"#\"/>";
+                        lcol+="<img class=\"asimg\" src=\""+imagePath+"\" href=\"#\"/>";
                         lcol+="<p class=\"title\">"+title+"</p>";
                         lcol+="</div>";
                     }
                 }
                 lcol+="</div>";
                 rcol+="</div>";
-                $('#contentContainer').append(lcol);
-                $('#contentContainer').append(rcol);
+                $('#rows').append(lcol);
+                $('#rows').append(rcol);
             },
             error: function(response, error){
-                $('#contentContainer').append("error");
                 console.log(error);
             }
     });

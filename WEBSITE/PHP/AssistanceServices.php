@@ -11,7 +11,7 @@ if ($connection->connect_error) {
     exit();
 }
 
-$query = 'SELECT Category FROM assistanceservice GROUP BY Category';
+$query = 'SELECT Category, ID FROM assistanceservice GROUP BY Category';
 
 $result = $connection->query($query);
 if($result->num_rows > 0){
