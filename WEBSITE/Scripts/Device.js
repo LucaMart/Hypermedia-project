@@ -32,6 +32,7 @@ function loadPage(){
             var includedDiv = device[0].IncludedInThePrice;
             var specsDiv = device[0].Specifications;
             var colors = device[0].Colors;
+            var category = device[0].Category;
 
             console.log(specsDiv);
 
@@ -60,6 +61,20 @@ function loadPage(){
                 }
                 el += "</div>"
                 $('#colorsDiv').html(el);
+            }
+
+            $('.breadcrumb .active').html(name);
+            $('#categoryBreadcrumb').html(category);
+
+            switch(category) {
+                case "TV and SmartLiving":
+                    $('#categoryBreadcrumb').attr("href", "Devices-TVAndSmartLiving.html");
+                    break;
+                case "Smartphones And Phones":
+                    $('#categoryBreadcrumb').attr("href", "Devices-SmartphonesAndPhones.html");
+                    break;
+                default:
+                    break;
             }
 
             $('.toClick').click();
