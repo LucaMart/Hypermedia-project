@@ -3,14 +3,25 @@ $(document).ready(loadPage);
 function loadPage(){
     var id=1;
 
+    var serviceType = sessionStorage.getItem("ourType");
+    var serviceIdent = sessionStorage.getItem("ourServiceIdentifier");
+    var filePathPhp="";
+
+    if (serviceType=="AssistanceService"){
+        filePathPhp="./PHP/RelatedDevices-AS.php";
+    }
+    if (serviceType=="SmartLifeService"){
+        filePathPhp="./PHP/RelatedDevices-SL.php";
+    }
+
+
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/RelatedDevices.php", //Relative or absolute path to file.php file
+        url: filePathPhp, //Relative or absolute path to file.php file
         data: {
-            type: sessionStorage.getItem("ourType"),
-            serviceIdentifier: sessionStorage.getItem("ourServiceIdentifier")
+            serviceIdentifier: serviceIdent
             },
 
         success: function(response) {
@@ -19,7 +30,9 @@ function loadPage(){
             console.log(JSON.parse(response));
             var devices = JSON.parse(response);
             console.log("Response parsed successfully");
+
             var listOfDevicesDivs="";
+            var serviceName = devices[0].ServiceName;
 
             for(var i=0;i<devices.length;i++){
                 var name = devices[i].Name;
@@ -38,7 +51,21 @@ function loadPage(){
             }
 
             console.log(listOfDevicesDivs);
+            $('#ServiceTitle').html(serviceName);
             $('#mainReceiver').append(listOfDevicesDivs);
+
+            $('#backLink').append(serviceName);
+            switch(serviceType){
+                case "SmartLifeService":
+                    serviceIdent.replace(" ",/%20/g)
+                    $('#backLink').attr("href","SmartLifeService.html"+"?service="+serviceIdent);
+                    break;
+                case "AssistanceService":
+                    $('#backLink').attr("href","SmartLifeService.html"+"?service="+serviceIdent);
+                    break;
+                default:
+                    break;
+            }
 
         },
         error: function(request,error)

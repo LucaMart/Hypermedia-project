@@ -7,9 +7,9 @@ if (mysqli_connect_errno()){
     exit();
 }
 
-$deviceName = $_POST["deviceName"];
+$serviceIdentifier=$_POST["serviceIdentifier"];
 
-$query = "SELECT Name,ImagePath,Category,Characteristics,Price,Vendor,Model,Specifications,IncludedInThePrice,Colors FROM device WHERE Name='$deviceName'";
+$query = "SELECT `Device-Name` AS Name, `SLService-Name` AS ServiceName, D.imagePath,D.Price FROM `devices-relatedsl` AS DSL,device AS D WHERE `Device-Name`=D.Name and `SLService-Name`='$serviceIdentifier'";
 
 
 $result = $connection->query($query);

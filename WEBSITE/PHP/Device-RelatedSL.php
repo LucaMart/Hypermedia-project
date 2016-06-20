@@ -7,18 +7,10 @@ if (mysqli_connect_errno()){
     exit();
 }
 
-$serviceType=$_POST["type"];
-$serviceIdentifier=$_POST["serviceIdentifier"];
+$deviceName = $_POST["device"];
+//$deviceName = str_replace("%20"," ",$deviceName);
 
-if ($serviceType == "AssistanceService") {
-    $query = "SELECT `Device-Name` AS Name,D.imagePath,D.Price FROM `devices-relatedas` AS DAS,device AS D WHERE `Device-Name`=Name and `assistanceservice-ID`='$serviceIdentifier'";
-}
-if ($serviceType == "SmartLifeService") {
-    $query = "SELECT `Device-Name` AS Name,D.imagePath,D.Price FROM `devices-relatedsl` AS DSL,device AS D WHERE `Device-Name`=Name and `SLService-Name`='$serviceIdentifier'";
-}
-
-
-
+$query = "SELECT DSL.`Device-Name`, DSL.`SLService-Name` AS SLName, SLS.Category as SLCategory FROM `devices-relatedsl` AS DSL, smartlifeservice as SLS WHERE `Device-Name`='$deviceName' and DSL.`SLService-Name`=SLS.Name";
 
 $result = $connection->query($query);
 

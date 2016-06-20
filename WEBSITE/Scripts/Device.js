@@ -5,10 +5,7 @@ function loadPage(){
     var id=1;
 
     ourDevice = ourDevice.replace(/%20/g," ");
-
-    var queryDevice="SELECT Name,ImagePath,Characteristics,Price,Vendor,Model,Specifications,IncludedInThePrice,Colors FROM device WHERE Name="+"\""+ourDevice+"\"";
-    var querySL="SELECT DSL.`Device-Name`, DSL.`SLService-Name` AS SLName, SLS.Category as SLCategory FROM `devices-relatedsl` AS DSL, smartlifeservice as SLS WHERE `Device-Name`=\""+ourDevice+"\" and DSL.`SLService-Name`=SLS.Name";
-    var queryAS= "SELECT `AssistanceService-ID`,Name AS ASName, Category as ASCategory, SubCategory AS ASsubcategory FROM `devices-relatedas`, assistanceservice WHERE `Device-Name`=\""+ourDevice+"\" and `devices-relatedas`.`AssistanceService-ID`=assistanceservice.ID";
+    console.log(ourDevice);
 
     $.ajax({
         method: "POST",
@@ -16,7 +13,7 @@ function loadPage(){
         //crossDomain: true, //localhost purposes
         url: "./PHP/Device.php", //Relative or absolute path to file.php file
         data: {
-            query : queryDevice
+            deviceName: ourDevice
             },
 
         success: function(response) {
@@ -35,6 +32,7 @@ function loadPage(){
             var includedDiv = device[0].IncludedInThePrice;
             var specsDiv = device[0].Specifications;
             var colors = device[0].Colors;
+            var category = device[0].Category;
 
             console.log(specsDiv);
 
@@ -65,6 +63,20 @@ function loadPage(){
                 $('#colorsDiv').html(el);
             }
 
+            $('.breadcrumb .active').html(name);
+            $('#categoryBreadcrumb').html(category);
+
+            switch(category) {
+                case "TV and SmartLiving":
+                    $('#categoryBreadcrumb').attr("href", "Devices-TVAndSmartLiving.html");
+                    break;
+                case "Smartphones And Phones":
+                    $('#categoryBreadcrumb').attr("href", "Devices-SmartphonesAndPhones.html");
+                    break;
+                default:
+                    break;
+            }
+
             $('.toClick').click();
 
         },
@@ -78,9 +90,9 @@ function loadPage(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/Device.php", //Relative or absolute path to file.php file
+        url: "./PHP/Device-RelatedSL.php", //Relative or absolute path to file.php file
         data: {
-            query: querySL
+            device: ourDevice
             },
 
         success: function(response) {
@@ -112,9 +124,9 @@ function loadPage(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/Device.php", //Relative or absolute path to file.php file
+        url: "./PHP/Device-RelatedAS.php", //Relative or absolute path to file.php file
         data: {
-            query: queryAS
+            device: ourDevice
             },
 
         success: function(response) {
