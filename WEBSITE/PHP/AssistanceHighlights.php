@@ -9,7 +9,7 @@ if ($connection->connect_error) {
     print("Error connecting to DBMS:".mysqli_connect_error());
     exit();
 }
-$query= "SELECT Title FROM `as-descriptiondiv` WHERE Highlights = 1";
+$query= "SELECT Title, ASServiceID FROM `as-descriptiondiv` WHERE Highlights = 1";
 $result = $connection->query($query);
 if($result->num_rows >0){
     $myArray = array(); //create an array to store result

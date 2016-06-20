@@ -2,6 +2,7 @@ $(document).ready(fun);
 
 function fun(){
     
+    
     $.ajax({
         method: "POST",
         url: "PHP/AssistanceTopic.php",
@@ -14,8 +15,13 @@ function fun(){
             var index = "";
             var topic = "";
             $("#title").append(array[0].ASServiceName);
+            if(array[0].ButtonName != null){
+                $("#button").append(array[0].ButtonName);
+                var button = encodeURI("SmartLifeService.html?service="+array[0].ButtonName);
+                $('#button').attr("href", button);
+            }
             for(i=0; i<array.length;i++){
-                index+="<li><a class=\"indexelement\">"+array[i].Title+"</a></li>";
+                index+="<li><a class=\"indexelement\"  onClick=\"link_click()\">"+array[i].Title+"</a></li>";
                 topic+="<div class=\"topic\">";
                 topic+="<h4 class=\"topictitle\">"+array[i].Title+"</h4>";
                 topic+="<p class=\"topictext\">"+array[i].Content+"</p>";
@@ -24,7 +30,6 @@ function fun(){
             
             $("#indexlist").append(index);
             $("#servicecontainer").append(topic);
-            $("#button").append("Tim Vision");
         },
         error: function(response, error){
             console.log(error);
@@ -33,3 +38,9 @@ function fun(){
         
     })
 }
+
+/*function link_click(){
+    $('#servicecontainer').animate({
+        scrollTop: $("#elementtoScrollToID").offset().top
+    }
+}*/

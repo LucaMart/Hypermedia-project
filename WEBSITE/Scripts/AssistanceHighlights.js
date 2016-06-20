@@ -14,7 +14,7 @@ function fun(){
                         html+="<div class=\"row\">";
                     }
                     html+="<div class=\" col col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-4\">";
-                    html+="<a class=\"element\" href=\"#\">"+result[i].Title+"</a>";
+                    html+="<a class=\"element\" href=\"AssistanceTopic.html?"+result[i].ASServiceID+"\">"+result[i].Title+"</a>";
                     html+="</div>";
                     if(i%2 || i==(result.length-1)){
                         html+="</div>";

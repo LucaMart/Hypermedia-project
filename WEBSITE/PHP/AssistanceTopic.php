@@ -10,7 +10,7 @@ if ($connection->connect_error) {
     exit();
 }
 $id = $_POST ["id"];
-$query= "SELECT Title, Content, ASServiceName, ASServiceID FROM `as-descriptiondiv` WHERE ASServiceID = '$id' ORDER BY `Order`";
+$query= "SELECT Title, Content, ASServiceName, ASServiceID, ButtonName FROM `as-descriptiondiv` WHERE ASServiceID = '$id' ORDER BY `Order`";
 $result = $connection->query($query);
  if($result->num_rows >0){
     $myArray = array(); //create an array to store result
