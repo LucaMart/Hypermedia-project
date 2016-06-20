@@ -16,7 +16,7 @@ function loadPage(){
         //crossDomain: true, //localhost purposes
         url: "./PHP/Device.php", //Relative or absolute path to file.php file
         data: {
-            query : queryDevice
+            deviceName: ourDevice
             },
 
         success: function(response) {
@@ -73,14 +73,14 @@ function loadPage(){
             console.log(error);
         }
     });
-
+/*
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/Device.php", //Relative or absolute path to file.php file
+        url: "./PHP/Device-RelatedSL.php", //Relative or absolute path to file.php file
         data: {
-            query: querySL
+            device: ourDevice
             },
 
         success: function(response) {
@@ -112,9 +112,9 @@ function loadPage(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/Device.php", //Relative or absolute path to file.php file
+        url: "./PHP/Device-RelatedAS.php", //Relative or absolute path to file.php file
         data: {
-            query: queryAS
+            device: ourDevice
             },
 
         success: function(response) {
@@ -141,5 +141,5 @@ function loadPage(){
             console.log(error);
         }
     });
-
+*/
 }

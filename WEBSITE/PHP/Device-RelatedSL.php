@@ -7,10 +7,10 @@ if (mysqli_connect_errno()){
     exit();
 }
 
-$deviceName = $_POST["deviceName"];
+$deviceName = $_POST["device"];
+//$deviceName = str_replace("%20"," ",$deviceName);
 
-$query = "SELECT Name,ImagePath,Characteristics,Price,Vendor,Model,Specifications,IncludedInThePrice FROM device WHERE Name='$deviceName'";
-
+$query = "SELECT DSL.`Device-Name`, DSL.`SLService-Name` AS SLName, SLS.Category as SLCategory FROM `devices-relatedsl` AS DSL, smartlifeservice as SLS WHERE `Device-Name`='$deviceName' and DSL.`SLService-Name`=SLS.Name";
 
 $result = $connection->query($query);
 

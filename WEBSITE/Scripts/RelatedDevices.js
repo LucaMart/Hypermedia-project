@@ -3,6 +3,8 @@ $(document).ready(loadPage);
 function loadPage(){
     var id=1;
 
+    //$('#ServiceTitle').html(ServiceName);
+
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
