@@ -16,12 +16,12 @@ function fun(){
                     var imagePath = "Images/Assistance services/Categories/"+title+".png";
                     if(i%2){
                         rcol+="<div class=\"content\">";
-                        rcol+="<img class=\"asimg\" src=\""+imagePath+"\" href=\"#\"/>";
+                        rcol+="<a href=\"AssistanceSubCategory.html?"+id+" \"><img class=\"asimg\" src=\""+imagePath+"\"/></a>";
                         rcol+="<p class=\"title\">"+title+"</p>";
                         rcol+="</div>";
                     }else{
                         lcol+="<div class=\"content\">";
-                        lcol+="<img class=\"asimg\" src=\""+imagePath+"\" href=\"#\"/>";
+                        lcol+="<a href=\"AssistanceSubCategory.html?"+id+" \"><img class=\"asimg\" src=\""+imagePath+"\"/></a>";
                         lcol+="<p class=\"title\">"+title+"</p>";
                         lcol+="</div>";
                     }
