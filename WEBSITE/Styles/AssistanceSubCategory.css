@@ -47,4 +47,9 @@
         flex: none;
         width: 100%;
     }
+    
+    .list{
+        padding: 0px;
+    }
+
 }

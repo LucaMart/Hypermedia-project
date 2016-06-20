@@ -15,7 +15,7 @@ function fun(){
                     var c;
                     if(i%2==0){
                         html+="<div class=\"row\">";
-                    }SmartLife.css
+                    }
                     html+="<div class=\"cell\">";
                     html+="<div class=\"cellcontent\">";
                     html+="<h2 class=\"title\">"+result[i][0]+"</h2>";
