@@ -37,9 +37,9 @@ if($result->num_rows == 1){
     }
     echo json_encode($myArray);
 }else{
-    echo "0";    
+    echo "Nothing found";    
 }
-
+$result2->close();
 $result->close();
 $connection->close();
 ?>

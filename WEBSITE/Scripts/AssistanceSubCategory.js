@@ -21,7 +21,7 @@ function fun(){
                     html+="<h2 class=\"title\">"+result[i][0]+"</h2>";
                     html+="<ul class=\"list\">";
                     for(c=1; c<result[i].length; c+=2){
-                        html+="<li class=\"element\"><a class=\"link\" href=\"#\">"+result[i][c]+"</a></li>";
+                        html+="<li class=\"element\"><a class=\"link\" href=\"AssistanceTopic.html?"+result[i][c+1]+"\">"+result[i][c]+"</a></li>";
                     }
                     html+="</ul>";
                     html+="</div>";
