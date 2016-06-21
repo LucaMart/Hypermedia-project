@@ -45,8 +45,11 @@ function link_click(data){
     var div = data+"topic";
     var element = document.getElementById(div);
     var servicecontainer = document.getElementById("servicecontainer");
-    var page = document.getElementById("pageContainer");
+    var body = document.body;
+    var html = document.documentElement;
     var offset = element.offsetTop - servicecontainer.offsetTop;
     servicecontainer.scrollTop = offset;
-    page.scrollTop = element.offsetTop;
+    body.scrollTop= element.offsetTop;
+    html.scrollTop= element.offsetTop;
+    
 }
