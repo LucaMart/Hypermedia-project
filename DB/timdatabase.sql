@@ -163,9 +163,8 @@ DROP TABLE IF EXISTS `faquestion`;
 CREATE TABLE `faquestion` (
   `Question` varchar(255) NOT NULL,
   `Answer` text NOT NULL,
-  `ASService-Name` varchar(63) NOT NULL,
-  `ASService-Subcategory` varchar(63) NOT NULL,
-  PRIMARY KEY (`Question`,`ASService-Name`,`ASService-Subcategory`)
+  `ASServiceID` int(11) NOT NULL,
+  PRIMARY KEY (`Question`,`ASServiceID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -175,7 +174,7 @@ CREATE TABLE `faquestion` (
 
 LOCK TABLES `faquestion` WRITE;
 /*!40000 ALTER TABLE `faquestion` DISABLE KEYS */;
-INSERT INTO `faquestion` VALUES ('I am already a registered user of the TIMVision Service. Do I have to register again?','No, you need to login with the username (email address) and password that you chose during registration.','Discover TIM Vision','TIM Vision'),('I am not a client of TIM ADSL; can I use TIMVision?','Yes, you can access all the TIMvision features and watch TV in the REPLAY FREE TV section. And you can purchase movies of the Videostore section and the subscription TIMvision TV, with the payment charged on your credit card (Visa, Mastercard or American Express) . But remember, to keep your subscription active it is necessary to store the data of your credit card.','Discover TIM Vision','TIM Vision'),('I am unable to watch the the videos.','Some display problems may depend on the quality of the ADSL line.\r\nYou\'ll want to check which type of video quality (HD, SD) can be displayed via the video quality tests that can find in the Settings menu Test ADSL line.\r\n\r\nWe remind you to always update your TV firmware.','Discover TIM Vision','TIM Vision'),('What is the registration procedure, and what is it useful for?','The registration for TIMvision is needed to assure safety in the purchases of securities and free viewing on other devices. You can register with a username (email) and password of your choice.\r\nTo complete the registration you will be required to confirm the link in the email sent to the address you provided. Remember that the username and password chosen will have tobe inserted on your Smart TV to login. Then it will no longer be required, unless you do not run the logout.\r\nWith the same credentials you will be able to login on all TIMvision compatible devices.','Discover TIM Vision','TIM Vision');
+INSERT INTO `faquestion` VALUES ('I am already a registered user of the TIMVision Service. Do I have to register again?','No, you need to login with the username (email address) and password that you chose during registration.',11),('I am not a client of TIM ADSL; can I use TIMVision?','Yes, you can access all the TIMvision features and watch TV in the REPLAY FREE TV section. And you can purchase movies of the Videostore section and the subscription TIMvision TV, with the payment charged on your credit card (Visa, Mastercard or American Express) . But remember, to keep your subscription active it is necessary to store the data of your credit card.',11),('I am unable to watch the the videos.','Some display problems may depend on the quality of the ADSL line.\r\nYou\'ll want to check which type of video quality (HD, SD) can be displayed via the video quality tests that can find in the Settings menu Test ADSL line.\r\n\r\nWe remind you to always update your TV firmware.',11),('What is the registration procedure, and what is it useful for?','The registration for TIMvision is needed to assure safety in the purchases of securities and free viewing on other devices. You can register with a username (email) and password of your choice.\r\nTo complete the registration you will be required to confirm the link in the email sent to the address you provided. Remember that the username and password chosen will have tobe inserted on your Smart TV to login. Then it will no longer be required, unless you do not run the logout.\r\nWith the same credentials you will be able to login on all TIMvision compatible devices.',11);
 /*!40000 ALTER TABLE `faquestion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -294,4 +293,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-20 21:59:32
+-- Dump completed on 2016-06-21  8:43:49
