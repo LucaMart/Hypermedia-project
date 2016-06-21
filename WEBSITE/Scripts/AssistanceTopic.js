@@ -21,7 +21,7 @@ function fun(){
                 $('#button').attr("href", button);
             }
             for(i=0; i<array.length;i++){
-                index+="<li><a id=\""+array[i].Title+"\" class=\"indexelement\" href=\"#\"  onClick=\"link_click(this.id)\">"+array[i].Title+"</a></li>";
+                index+="<li><a id=\""+array[i].Title+"\" class=\"indexelement\"  onClick=\"link_click(this.id)\" href=\"javaScript:void(0)\" >"+array[i].Title+"</a></li>";
                 topic+="<div class=\"topic\">";
                 topic+="<h4 id=\""+array[i].Title+"topic\" class=\"topictitle\">"+array[i].Title+"</h4>";
                 topic+="<p class=\"topictext\">"+array[i].Content+"</p>";
@@ -45,6 +45,8 @@ function link_click(data){
     var div = data+"topic";
     var element = document.getElementById(div);
     var servicecontainer = document.getElementById("servicecontainer");
+    var page = document.getElementById("pageContainer");
     var offset = element.offsetTop - servicecontainer.offsetTop;
     servicecontainer.scrollTop = offset;
+    page.scrollTop = element.offsetTop;
 }

@@ -1,7 +1,7 @@
 $(document).ready(fun);
 
 function fun(){
-    
+    $('#button').attr("href", "AssistanceTopic.html?"+id);
     $.ajax({
         method: "POST",
         url: "PHP/FAQ.php",
