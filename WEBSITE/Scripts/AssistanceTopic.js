@@ -21,9 +21,9 @@ function fun(){
                 $('#button').attr("href", button);
             }
             for(i=0; i<array.length;i++){
-                index+="<li><a class=\"indexelement\" href=\"#\"  onClick=\"link_click()\">"+array[i].Title+"</a></li>";
+                index+="<li><a id=\""+array[i].Title+"\" class=\"indexelement\" href=\"#\"  onClick=\"link_click(this.id)\">"+array[i].Title+"</a></li>";
                 topic+="<div class=\"topic\">";
-                topic+="<h4 class=\"topictitle\">"+array[i].Title+"</h4>";
+                topic+="<h4 id=\""+array[i].Title+"topic\" class=\"topictitle\">"+array[i].Title+"</h4>";
                 topic+="<p class=\"topictext\">"+array[i].Content+"</p>";
                 topic+="</div>";
             }
@@ -39,10 +39,12 @@ function fun(){
     })
 }
 
-function link_click(){
-    alert("Ok");
-    
-    /*$('#servicecontainer').animate({
-        scrollTop: $("#elementtoScrollToID").offset().top
-    }*/
+
+
+function link_click(data){
+    var div = data+"topic";
+    var element = document.getElementById(div);
+    var servicecontainer = document.getElementById("servicecontainer");
+    var offset = element.offsetTop - servicecontainer.offsetTop;
+    servicecontainer.scrollTop = offset;
 }
