@@ -38,6 +38,7 @@ function loadPage(){
             }
 
             console.log(listOfDevicesDivs);
+            $('head title').html(ourCategory);
             $('.breadcrumb .active').html(ourCategory);
             $('#mainReceiver').append(listOfDevicesDivs);
         },
