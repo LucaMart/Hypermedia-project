@@ -2,7 +2,6 @@ $(document).ready(fun);
 
 function fun(){
     
-    
     $.ajax({
         method: "POST",
         url: "PHP/AssistanceTopic.php",
@@ -15,13 +14,14 @@ function fun(){
             var index = "";
             var topic = "";
             $("#title").append(array[0].ASServiceName);
+            $("#faq").attr('href', "FAQ.html?"+id);
             if(array[0].ButtonName != null){
                 $("#button").append(array[0].ButtonName);
                 var button = encodeURI("SmartLifeService.html?service="+array[0].ButtonName);
                 $('#button').attr("href", button);
             }
             for(i=0; i<array.length;i++){
-                index+="<li><a class=\"indexelement\"  onClick=\"link_click()\">"+array[i].Title+"</a></li>";
+                index+="<li><a class=\"indexelement\" href=\"#\"  onClick=\"link_click()\">"+array[i].Title+"</a></li>";
                 topic+="<div class=\"topic\">";
                 topic+="<h4 class=\"topictitle\">"+array[i].Title+"</h4>";
                 topic+="<p class=\"topictext\">"+array[i].Content+"</p>";
@@ -39,8 +39,10 @@ function fun(){
     })
 }
 
-/*function link_click(){
-    $('#servicecontainer').animate({
+function link_click(){
+    alert("Ok");
+    
+    /*$('#servicecontainer').animate({
         scrollTop: $("#elementtoScrollToID").offset().top
-    }
-}*/
+    }*/
+}
