@@ -9,7 +9,7 @@ if (mysqli_connect_errno()){
 
 $serviceName=$_POST["service"];
 
-$query = "SELECT Name,Description,ActivationAndRules,Price,SLImagePath,RelatedProductsImagePath FROM smartlifeservice WHERE Name='$serviceName'";
+$query = "SELECT Name,Category,Description,ActivationAndRules,Price,SLImagePath,RelatedProductsImagePath FROM smartlifeservice WHERE Name='$serviceName'";
 
 
 $result = $connection->query($query);

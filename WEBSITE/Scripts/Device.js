@@ -106,8 +106,12 @@ function loadPage(){
             for(var i=0; i<SLServices.length; i++){
                 name= SLServices[i].SLName;
                 category= SLServices[i].SLCategory;
+                linkName= name.replace(" ", "%20");
 
-                $('#RelatedServices').append(category+" : "+ "<a href=\"#\">"+name+"</a><br/>");
+                $('#RelatedServices').append(
+                    category+" : "+
+                    "<a href=\""+"SmartLifeService.html?service="+linkName+
+                    "\">"+name+"</a><br/>");
             }
 
 
