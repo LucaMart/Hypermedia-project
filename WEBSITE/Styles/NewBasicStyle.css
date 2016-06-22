@@ -59,6 +59,10 @@ header {
     border: 1px white solid;
 }
 
+.currentLandmark {
+    font-weight: bold;
+}
+
 
 #mainNav{
     clear: both;

@@ -58,6 +58,9 @@ function loadPage(){
                 case "TV&Entertainment":
                     $('#breadCategory').attr("href","SL-TV&Entertainment.html");
                     break;
+                case "Home":
+                    $('#breadCategory').attr("href","SL-Home.html");
+                    break;
                 default:
                     break;
             }
