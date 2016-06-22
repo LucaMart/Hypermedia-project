@@ -61,7 +61,7 @@ function loadPage(){
                     $('#backLink').attr("href","SmartLifeService.html"+"?service="+serviceIdent);
                     break;
                 case "AssistanceService":
-                    $('#backLink').attr("href","SmartLifeService.html"+"?service="+serviceIdent);
+                    $('#backLink').attr("href","AssistanceTopic.html"+"?service="+serviceIdent);
                     break;
                 default:
                     break;

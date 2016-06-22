@@ -1,0 +1,29 @@
+.SLCategoryHeader img, .SLCategoryHeader h2 {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: -12px;
+}
+@media (max-width: 768px){
+    .SLCategoryHeader h2{
+    font-size: 1.8rem;
+    }
+    .SLCategoryHeader img {
+        max-width: 60px;
+    }
+}
+
+#homeServicesDiv1 img, #homeServicesDiv2 img {
+    max-width: 80%;
+    display: block;
+    margin: 2px auto;
+}
+
+#homeServicesDiv2 {
+    border-left: 1px grey dotted;
+}
+@media (max-width: 768px){
+    #homeServicesDiv1, #homeServicesDiv2 {
+        border-bottom: 1px grey dotted;
+    }
+}
