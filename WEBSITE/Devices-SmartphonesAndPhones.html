@@ -45,19 +45,19 @@
                     <form>
                         <h4>Filters</h4>
                         <h5>Devices</h5>
-                        <input type="radio" name="deviceType" value="all" checked> All </input><br/>
-                        <input type="radio" name="deviceType" value="smartphones"> Smartphones </input><br/>
-                        <input type="radio" name="deviceType" value="phones"> Phones </input><br/>
+                        <input type="radio" name="subCategory" value="all" checked onclick="filter()"> All </input><br/>
+                        <input type="radio" name="subCategory" value="Smartphone" onclick="filter()"> Smartphones </input><br/>
+                        <input type="radio" name="subCategory" value="Phones" onclick="filter()"> Phones </input><br/>
                         <h5>Operating System</h5>
-                        <input type="checkbox" name="OS1" value="Android">Android </input><br/>
-                        <input type="checkbox" name="OS2" value="iOs"> iOs</input> <br/>
-                        <input type="checkbox" name="OS3" value="Windows"> Windows</input> <br/>
+                        <input type="checkbox" name="Characteristics" value="Android" onclick="filter()">Android </input><br/>
+                        <input type="checkbox" name="Characteristics" value="iOs" onclick="filter()"> iOs</input> <br/>
+                        <input type="checkbox" name="Characteristics" value="Windows" onclick="filter()"> Windows</input> <br/>
                         <h5>Minimum Price</h5>
                         <div id="minPriceNum">0 E</div>
-                        <input type="range" min="0" max="1000" value="0" step="5" onchange="showValue(this.value)" />
+                        <input type="range" name="minPrice"min="0" max="1000" value="0" step="5" onchange="showValue(this.value)" onclick="filter()"/>
                         <h5>Maximum Price</h5>
                         <div id="maxPriceNum">0 E</div>
-                        <input type="range" min="0" max="1200" value="0" step="5" onchange="showValue(this.value)" />
+                        <input type="range" min="0" name="maxPrice" max="1200" value="1200" step="5" onchange="showValue(this.value)" onclick="filter()"/>
                     </form>
                 </div>
 
