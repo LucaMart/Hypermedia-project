@@ -14,7 +14,7 @@ col=".$var." ORDER BY id DESC GROUP BY….
 
 $chosenCategory = $_POST["category"];
 
-$query = "SELECT Name,Category,Subcategory,SLImagePath FROM smartlifeservice WHERE Category='$chosenCategory'";
+$query = "SELECT Name,Category,Comment,Subcategory,SLImagePath FROM smartlifeservice WHERE Category='$chosenCategory'";
 
 
 $result = $connection->query($query);
