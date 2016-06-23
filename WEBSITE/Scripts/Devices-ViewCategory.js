@@ -156,3 +156,9 @@ function filter(){
           
     });
 }
+
+function showValue(value, id){
+    var divId= id+"Num";
+    document.getElementById(divId).innerHTML=value+" &#8364";
+}
+

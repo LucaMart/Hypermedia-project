@@ -104,3 +104,76 @@ header {
     /*height: 90%;*/
 }
 
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+Firefox
+
+In Firefox, the track is styled using the ::-moz-range-track pseduo selector, and the thumb using ::-moz-range-thumb.
+Gotchas
+
+There's currently a little bug in Firefox where outline: none doesn't remove focus styles. If you have a solid background colour, you can hack a fix by hiding the outline under a border.
+
+You'll also need to give input[type=range] the same width as your track. It won't expand to contain the track on it's own.
+
+input[type=range]{
+    /* fix for FF unable to apply focus style bug  */
+    border: 1px solid white; 
+
+    /*required for proper track sizing in FF*/
+    /*width: 300px;*/
+}
+
+input[type=range]::-moz-range-track {
+    /*width: 300px;*/
+    /*height: 5px;*/
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    /*height: 16px;
+    width: 16px;*/
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: #ccc;
+}

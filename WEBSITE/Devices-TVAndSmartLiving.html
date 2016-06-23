@@ -47,16 +47,16 @@
                     <form>
                         <h4>Filters</h4>
                         <h5>Devices</h5>
-                        <input type="radio" name="deviceType" value="all" checked> All </input><br/>
-                        <input type="radio" name="deviceType" value="smartwatch"> Smartwatch </input><br/>
-                        <input type="radio" name="deviceType" value="smartTV"> SmartTV </input><br/>
-                        <input type="radio" name="deviceType" value="others"> others </input><br/>
+                        <input type="radio" name="SubCategory" value="all" onclick="filter()" checked> All </input><br/>
+                        <input type="radio" name="SubCategory" value="Smartwatch" onclick="filter()"> Smartwatch </input><br/>
+                        <input type="radio" name="SubCategory" value="SmartTV" onclick="filter()"> SmartTV </input><br/>
+                        <input type="radio" name="SubCategory" value="others" onclick="filter()"> others </input><br/>
                         <h5>Minimum Price</h5>
-                        <div id="minPriceNum">0 E</div>
-                        <input type="range" min="0" max="1000" value="0" step="5" onchange="showValue(this.value)" />
+                        <div id="minPriceNum">0 &#8364</div>
+                        <input id= "minPrice" type="range" name="minPrice" min="0" max="1000" value="0" step="5" onchange="filter()" oninput="showValue(this.value,this.id)" />
                         <h5>Maximum Price</h5>
-                        <div id="maxPriceNum">0 E</div>
-                        <input type="range" min="0" max="2000" value="0" step="5" onchange="showValue(this.value)" />
+                        <div id="maxPriceNum">2000 &#8364</div>
+                        <input id="maxPrice" type="range" name="maxPrice" min="0" max="2000" value="2000" step="5" onchange="filter()" oninput="showValue(this.value, this.id)"/>
                     </form>
                 </div>
                 <ul class="breadcrumb col-xs-12 col-sm-9">

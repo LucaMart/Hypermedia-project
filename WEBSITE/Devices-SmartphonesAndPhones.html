@@ -47,17 +47,17 @@
                         <h5>Devices</h5>
                         <input type="radio" name="subCategory" value="all" checked onclick="filter()"> All </input><br/>
                         <input type="radio" name="subCategory" value="Smartphone" onclick="filter()"> Smartphones </input><br/>
-                        <input type="radio" name="subCategory" value="Phones" onclick="filter()"> Phones </input><br/>
+                        <input type="radio" name="subCategory" value="Phone" onclick="filter()"> Phones </input><br/>
                         <h5>Operating System</h5>
                         <input type="checkbox" name="Characteristics" value="Android" onclick="filter()">Android </input><br/>
                         <input type="checkbox" name="Characteristics" value="iOs" onclick="filter()"> iOs</input> <br/>
                         <input type="checkbox" name="Characteristics" value="Windows" onclick="filter()"> Windows</input> <br/>
                         <h5>Minimum Price</h5>
-                        <div id="minPriceNum">0 E</div>
-                        <input type="range" name="minPrice"min="0" max="1000" value="0" step="5" onchange="showValue(this.value)" onclick="filter()"/>
+                        <div id="minPriceNum">0 &#8364</div>
+                        <input id="minPrice" type="range" name="minPrice"min="0" max="1000" value="0" step="5" onchange="filter()" oninput="showValue(this.value,this.id)"/>
                         <h5>Maximum Price</h5>
-                        <div id="maxPriceNum">0 E</div>
-                        <input type="range" min="0" name="maxPrice" max="1200" value="1200" step="5" onchange="showValue(this.value)" onclick="filter()"/>
+                        <div id="maxPriceNum">1200 &#8364</div>
+                        <input id="maxPrice" type="range" min="0" name="maxPrice" max="1200" value="1200" step="5" onchange="filter()" oninput="showValue(this.value,this.id)"/>
                     </form>
                 </div>
 
