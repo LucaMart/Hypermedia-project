@@ -1,6 +1,6 @@
 $(document).ready(filter);
 
-function loadPage(){
+/*function loadPage(){
     var id=1;
 
     $.ajax({
@@ -48,7 +48,7 @@ function loadPage(){
         }
     });
 
-}
+}*/
 var checkboxOn = [];
 var maxrange;
 var minrange;
@@ -76,11 +76,9 @@ function filter(){
                     if(filters[c].name=="minPrice"){
                         minrange = filters[c].value;
                         
-                    }
-                    else{
+                    }else{
                         if(filters[c].name=="maxPrice")
-                            maxrange = filters[c].value;
-                            
+                            maxrange = filters[c].value;       
                     }
                 }
             }
@@ -104,7 +102,7 @@ function filter(){
         var listOfDevicesDivs="";
         //$('h4').append(response);
         $('.device').remove();
-        for(i=0; i< Object.keys(deviceList).length; i++){
+        for(i=0; i< deviceList.length; i++){
             //check the price value
             var n = deviceList[i].Price.indexOf("&");
             var stringPrice = deviceList[i].Price.substring(0,n);

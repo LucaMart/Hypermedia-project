@@ -12,20 +12,19 @@ SELECT * FROM device WHERE
 col=".$var." ORDER BY id DESC GROUP BY….
 */
 
-$query = "SELECT Name,SLImagePath,Price FROM smartlifeservice WHERE InPromotion=1";
+$query = "SELECT Name,SLImagePath,Price,PromotionCategory FROM smartlifeservice WHERE InPromotion=1 AND PromotionCategory IS NOT NULL";
 //$query= "SELECT Name,Category,Subcategory,SLImagePath,Price FROM smartlifeservice WHERE InPromotion=1";
 
 $result = $connection->query($query);
 
-if($result->num_rows >0)
-{
-    $myArray = array(); //create an array to store result
+$myArray = array(); //create an array to store result
+if($result->num_rows >0){
     while($row = $result->fetch_array(MYSQLI_ASSOC)) {
         $myArray[] = $row;
     }
-    $jsonData = json_encode($myArray);
-echo $jsonData; //export in json
 }
+$jsonData = json_encode($myArray);
+echo $jsonData; //export in json
 
 $result->close();
 $connection->close();

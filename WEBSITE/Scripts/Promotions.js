@@ -1,8 +1,29 @@
 $(document).ready(loadPageDev);
 
+var maxrange;
+var minrange;
+var radioOn = [];
 function loadPageDev(){
     var id=1;
-
+   var filters = document.getElementsByTagName('input');
+    var c;
+    radioOn = [];
+    for (c=0; c<filters.length; c++){
+        if(filters[c].type=='radio' && filters[c].checked){
+            radioOn.push({Name: filters[c].name, Value: filters[c].value});
+        }else{
+            if(filters[c].type=='range'){
+                if(filters[c].name=='minPrice'){
+                    minrange = filters[c].value;
+                }else{
+                    if(filters[c].name=='maxPrice'){
+                        maxrange = filters[c].value;
+                    }
+                }
+            }
+        }
+    }
+    
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
@@ -14,9 +35,10 @@ function loadPageDev(){
             console.log(JSON.parse(response));
             var devices=JSON.parse(response);
             console.log("Response parsed successfully");
-
+            filter(devices);
             var listOfDevicesDivs="";
             var el="";
+            $('.device').remove();
             for(var i=0;i<devices.length;i++){
                 var name = devices[i].Name;
                 var price = devices[i].Price;
@@ -32,10 +54,9 @@ function loadPageDev(){
                     "</div>";
 
             }
-
             console.log(listOfDevicesDivs);
-            $('#mainReceiver').append(listOfDevicesDivs);
-            loadPageProm();
+            //$('#mainReceiver').append(listOfDevicesDivs);
+            loadPageProm(listOfDevicesDivs);
         },
         error: function(request,error)
         {
@@ -45,7 +66,7 @@ function loadPageDev(){
 
 }
 
-function loadPageProm(){
+function loadPageProm(listOfDevicesDivs){
     
     $.ajax({
         method: "POST",
@@ -57,8 +78,7 @@ function loadPageProm(){
             console.log(JSON.parse(response));
             var devices=JSON.parse(response);
             console.log("Response parsed successfully");
-
-            var listOfDevicesDivs="";
+            filter(devices); 
             var el="";
             for(var i=0;i<devices.length;i++){
                 var name = devices[i].Name;
@@ -85,4 +105,42 @@ function loadPageProm(){
             console.log(error);
         }
     });
+}
+
+function filter(devices){
+    var i;
+    var c;
+    for(i=0; i< Object.keys(devices).length; i++){
+        var n = devices[i].Price.indexOf("&");
+        var stringPrice = devices[i].Price.substring(0,n);
+        stringPrice = stringPrice.replace(",",".");
+        var float = parseFloat(stringPrice);
+        if(float<minrange || float>maxrange){
+            devices.splice(i,1);
+            i--;
+        }else{
+            var category = radioOn[0].Name;
+            var categoryValues = radioOn[0].Value.split("+");
+            var remove = 0;
+            if(categoryValues[0] != "all"){
+                for(c=0; c<categoryValues.length; c++){
+                    if(devices[i][category].indexOf(categoryValues[c])> -1){
+                        remove = 0;
+                        break;
+                    }
+                    remove = 1;
+                }
+            }
+            if(remove==1){
+                devices.splice(i,1);
+                i--;
+            }
+        }
+    }
+}
+
+
+function showValue(value, id){
+    var divId= id+"Num";
+    document.getElementById(divId).innerHTML=value+" &#8364";
 }

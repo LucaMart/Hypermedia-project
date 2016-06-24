@@ -45,18 +45,18 @@
                 <div id="DeviceFiltersDiv" class="col-xs-12 col-sm-3">
                     <form>
                         <h4>Filters</h4>
-                        <input type="radio" name="productType" value="all" checked> All </input><br/>
-                            <input type="radio" name="productType" value="installments"> Devices paid by installments </input><br/>
-                            <input type="radio" name="productType" value="landline"> Landline </input><br/>
-                            <input type="radio" name="productType" value="landline&mobile"> Landline + Mobile </input><br/>
-                            <input type="radio" name="productType" value="mobile"> Mobile </input><br/>
-                            <input type="radio" name="productType" value="TV&Entertainment"> TV &amp; Entertainment </input><br/>
+                        <input type="radio" name="PromotionCategory" value="all" onclick="loadPageDev()" checked> All </input><br/>
+                            <input type="radio" name="PromotionCategory" value="installments" onclick="loadPageDev()"> Devices paid by installments </input><br/>
+                            <input type="radio" name="PromotionCategory" value="Landline" onclick="loadPageDev()"> Landline </input><br/>
+                            <input type="radio" name="PromotionCategory" value="Landline+Mobile" onclick="loadPageDev()"> Landline + Mobile </input><br/>
+                            <input type="radio" name="PromotionCategory" value="Mobile" onclick="loadPageDev()"> Mobile </input><br/>
+                            <input type="radio" name="PromotionCategory" value="TV&Entertainment" onclick="loadPageDev()"> TV &amp; Entertainment </input><br/>
                             <h5>Minimum Price</h5>
-                            <div id="minPriceNum">0 €</div>
-                            <input type="range" min="0" max="2000" value="0" step="5" onchange="showValue(this.value)" />
+                            <div id="minPriceNum">0 &#8364</div>
+                            <input name="minPrice" type="range" min="0" max="2000" value="0" step="5" oninput="showValue(this.value, this.name)" onchange="loadPageDev()"/>
                             <h5>Maximum Price</h5>
-                            <div id="maxPriceNum">0 €</div>
-                            <input type="range" min="0" max="2000" value="0" step="5" onchange="showValue(this.value)" />
+                            <div id="maxPriceNum">2000 &#8364</div>
+                            <input name="maxPrice" type="range" min="0" max="2000" value="2000" step="5" oninput="showValue(this.value, this.name)" onchange="loadPageDev()"/>
                     </form>
                 </div>
                 <!--<div class=" device col-xs-12 col-sm-3">

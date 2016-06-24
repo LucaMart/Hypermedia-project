@@ -54,10 +54,10 @@
                         <input type="checkbox" name="Characteristics" value="Windows" onclick="filter()"> Windows</input> <br/>
                         <h5>Minimum Price</h5>
                         <div id="minPriceNum">0 &#8364</div>
-                        <input id="minPrice" type="range" name="minPrice"min="0" max="1000" value="0" step="5" onchange="filter()" oninput="showValue(this.value,this.id)"/>
+                        <input type="range" name="minPrice"min="0" max="1000" value="0" step="5" onchange="filter()" oninput="showValue(this.value,this.name)"/>
                         <h5>Maximum Price</h5>
                         <div id="maxPriceNum">1200 &#8364</div>
-                        <input id="maxPrice" type="range" min="0" name="maxPrice" max="1200" value="1200" step="5" onchange="filter()" oninput="showValue(this.value,this.id)"/>
+                        <input type="range" min="0" name="maxPrice" max="1200" value="1200" step="5" onchange="filter()" oninput="showValue(this.value,this.name)"/>
                     </form>
                 </div>
 
