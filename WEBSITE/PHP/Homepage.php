@@ -7,14 +7,15 @@ if (mysqli_connect_errno()){
     exit();
 }
 
-/**SQL Query Template:
-SELECT * FROM device WHERE
-col=".$var." ORDER BY id DESC GROUP BY….
-*/
+$type = $_POST["featuredType"];
 
-$chosenCategory = $_POST["category"];
+if (strcmp($type,"SmartLifeService")==0) {
+    $query = "SELECT Name,Introduction,SLImagePath FROM smartlifeservice WHERE Featured=1";
+}
 
-$query = "SELECT Name,Category,Introduction,Subcategory,SLImagePath FROM smartlifeservice WHERE Category='$chosenCategory'";
+if (strcmp($type,"Project")==0) {
+    $query = "SELECT Name,imagePath, Introduction FROM project WHERE Featured=1";
+}
 
 
 $result = $connection->query($query);

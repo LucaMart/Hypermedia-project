@@ -47,7 +47,7 @@
     display: inline;
 }
 
-#imgtitle{
+#serviceTitle{
     font-family: Verdana, sans-serif;
     font-weight: bold;
     color: darkblue;
@@ -74,7 +74,7 @@
     background-color: darkblue;
 }
 
-#TimVision{
+#serviceImage{
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
@@ -115,7 +115,7 @@
     width: 45%;
 }
 
-.homeimg3{
+.projectImage{
     width: 30%;
     vertical-align: top;
 }
@@ -151,11 +151,13 @@
     width: 30%;
 }
 
-#PappanoInWeb{
+#projectDiv{
     display: inline;
+    margin: 4px;
+    margin-top: 8px;
 }
 
-#PappanoLabel{
+#projectLabel{
     width: 30%;
     font-family: Verdana, sans-serif;
     font-weight: bold;
@@ -185,7 +187,7 @@
         width: 30%;
     }
 
-    .homeimg3{
+    .projectImage{
         width: 50%;
         margin-left: 25%;
         margin-right: 25%;
@@ -208,7 +210,7 @@
         margin-right: 5%;
     }
 
-    #PappanoLabel{
+    #projectLabel{
         width: 100%;
         text-align: center;
 

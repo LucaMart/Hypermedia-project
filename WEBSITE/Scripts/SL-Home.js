@@ -23,14 +23,14 @@ function loadPage(){
             for(var i=0;i<services.length;i++){
 
                 var name = services[i].Name;
-                var comment = services[i].Comment;
+                var introduction = services[i].Introduction;
                 var imagePath = services[i].SLImagePath;
                 var serviceDiv;
 
                 serviceDiv=
                     "<div>"+
                         "<h3>"+name+"</h3>"+
-                        "<p>"+comment+"</p>"+
+                        "<p>"+introduction+"</p>"+
                         "<a href=\"SmartLifeService.html?service="+name+"\""+">"+"More Details"+"</a>"+
                         "<img src=\""+imagePath+"\"/>"+
                     "</div>";
