@@ -1,3 +1,4 @@
+$(document).ready(resetRanges);
 $(document).ready(loadPageDev);
 
 var maxrange;
@@ -143,4 +144,9 @@ function filter(devices){
 function showValue(value, id){
     var divId= id+"Num";
     document.getElementById(divId).innerHTML=value+" &#8364";
+}
+
+function resetRanges(){
+    $('input[name=minPrice]').val($('input[name=minPrice]').prop('min'));
+    $('input[name=maxPrice]').val($('input[name=maxPrice]').prop('max'));
 }
