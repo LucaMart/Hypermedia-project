@@ -30,6 +30,15 @@ function fun(){
             
             $("#indexlist").append(index);
             $("#servicecontainer").append(topic);
+
+            if (typeof(Storage) == "undefined" ) {
+                alert("Your browser does not support HTML5 localStorage. Try upgrading.");
+            }
+            else {
+                console.log("Both localStorage and sessionStorage support is there.");
+            }
+            sessionStorage.setItem("ourType","AssistanceService");
+            sessionStorage.setItem("ourServiceIdentifier",id);
         },
         error: function(response, error){
             console.log(error);

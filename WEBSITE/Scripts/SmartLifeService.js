@@ -85,8 +85,3 @@ function loadPage(){
 
 }
 
-$('#productsLink').click(function(){
-
-
-
-});
