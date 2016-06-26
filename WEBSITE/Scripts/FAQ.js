@@ -12,6 +12,7 @@ function fun(){
             var array = JSON.parse(response);
             var i;
             var topic = "";
+            $("title").append(array[0].Name);
             $("#title").append(array[0].Name);
             $('#button').append(array[0].Name);
             $('#button').attr("href", "AssistanceTopic.html?"+id);
