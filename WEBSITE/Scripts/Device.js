@@ -1,6 +1,7 @@
 
 $(document).ready(loadPage);
 
+
 function loadPage(){
     var id=1;
 
@@ -31,8 +32,8 @@ function loadPage(){
             var model = device[0].Model;
             var includedDiv = device[0].IncludedInThePrice;
             var specsDiv = device[0].Specifications;
-            var colors = device[0].Colors;
             var category = device[0].Category;
+            var otherColors = device[0].AdditionalColors;
 
             console.log(specsDiv);
 
@@ -49,19 +50,7 @@ function loadPage(){
                 "<p><span>"+vendor+"</span>&nbsp;:&nbsp;<span>"+model+"</span></p>");
 
             $('#IncludedInPrice').html(includedDiv);
-
             $('#Specifications').html(specsDiv);
-
-            if (colors!=null){
-                var el = "<div id=\"productColors\"><h5>Available Colors : </h5>";
-
-                var colorsArray = colors.split("-");
-                for (var i=0; i<colorsArray.length; i++){
-                    el+= "<input type=\"button\" style=\"background-color:"+colorsArray[i]+"\" onclick=\"\" />";
-                }
-                el += "</div>"
-                $('#colorsDiv').html(el);
-            }
 
             $('.breadcrumb .active').html(name);
             $('#categoryBreadcrumb').html(category);
@@ -79,12 +68,17 @@ function loadPage(){
 
             $('.toClick').click();
 
+            if(otherColors==1){
+                ajaxCallForColors();
+            }
+
         },
         error: function(request,error)
         {
             console.log(error);
         }
     });
+
 
     $.ajax({
         method: "POST",
@@ -113,15 +107,12 @@ function loadPage(){
                     "<a href=\""+"SmartLifeService.html?service="+linkName+
                     "\">"+name+"</a><br/>");
             }
-
-
             },
         error: function(request,error)
         {
             console.log(error);
         }
     });
-
 
 
     $.ajax({
@@ -148,8 +139,6 @@ function loadPage(){
 
                 $('#RelatedServices').append(category+" : "+subcategory+" : "+"<a href=\"#\">"+name+"</a><br/>");
             }
-
-
 
             },
         error: function(request,error)
