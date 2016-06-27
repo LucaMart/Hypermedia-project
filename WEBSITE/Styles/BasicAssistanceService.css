@@ -50,6 +50,10 @@
     font-family: Verdana, sans-serif;
 }
 
+.topicimg{
+    width: 50%;
+}
+
 #indexlist{
     text-align: left;
     padding-left: 2%;
