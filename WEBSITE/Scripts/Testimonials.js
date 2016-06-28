@@ -2,16 +2,12 @@ $(document).ready(loadPage);
 
 function loadPage(){
     var id=1;
-    var queryTestimonials ="SELECT Title, ImagePath, videoPath, Comment from testimonial"
 
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/WhoWeAre.php", //Relative or absolute path to file.php file
-        data: {
-            query : queryTestimonials
-            },
+        url: "./PHP/Testimonials.php", //Relative or absolute path to file.php file
 
         success: function(response) {
 
@@ -26,6 +22,7 @@ function loadPage(){
                 var title = test[i].Title;
                 var imagePath = test[i].ImagePath;
                 var comment = test[i].Comment;
+                var videoPath = test[i].videoPath;
 
                 if (comment==null){comment="";}
 
@@ -34,7 +31,8 @@ function loadPage(){
                 testDiv=
                     "<div class= \"testimonialDiv col-xs-12 col-sm-6\">"+
                     "<div><h3>"+title+"</h3>"+
-                    "<img src=\""+imagePath+"\"/>"+
+                    "<a href=\""+videoPath+"\">"+
+                    "<img src=\""+imagePath+"\"/>"+ "</a>"+
                     "</div>"+
                     comment+
                     "</div>";

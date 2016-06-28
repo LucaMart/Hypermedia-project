@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 28, 2016 alle 11:20
+-- Creato il: Giu 28, 2016 alle 18:30
 -- Versione del server: 10.1.13-MariaDB
 -- Versione PHP: 7.0.6
 
@@ -354,10 +354,10 @@ CREATE TABLE `testimonial` (
 --
 
 INSERT INTO `testimonial` (`Title`, `ImagePath`, `videoPath`, `Comment`) VALUES
-('Fabio Fazio', 'Images/WhoWeAre/TestimonialsFabioFazio2.jpg', NULL, '<p>Today we can think, create and communicate in ways that in the past we would have never imagined.<br/>\r\nWhatever the present, the future will surprise us.</p>'),
-('Fabio Fazio interviews Tim Berners-Lee', 'Images/WhoWeAre/TestimonialsInterview.png', NULL, NULL),
-('Pif', 'Images/WhoWeAre/TestimonialsPif.jpg', NULL, '<p>Infinite connections foster an infinite curiosity. New technologies are evolving more rapidly than our questions.</p>'),
-('Tim Berners-Lee', 'Images/WhoWeAre/TestimonialsTBL.jpg', NULL, '<p>Technology allows us to share ideas, to find answers that no one could have found on their own.<br/>It is also important to listen to other people. When we do both things, we become a part of something much larger than ourselves.</p>');
+('Fabio Fazio', 'Images/WhoWeAre/TestimonialsFabioFazio2.jpg', 'https://www.youtube.com/watch?v=eTz4o7NMGXg', '<p>Today we can think, create and communicate in ways that in the past we would have never imagined.<br/>\r\nWhatever the present, the future will surprise us.</p>'),
+('Fabio Fazio interviews Tim Berners-Lee', 'Images/WhoWeAre/TestimonialsInterview.png', 'https://www.youtube.com/watch?v=SQdMYRn6rRI', NULL),
+('Pif', 'Images/WhoWeAre/TestimonialsPif.jpg', 'https://www.youtube.com/watch?v=vQEhfXrCtKk', '<p>Infinite connections foster an infinite curiosity. New technologies are evolving more rapidly than our questions.</p>'),
+('Tim Berners-Lee', 'Images/WhoWeAre/TestimonialsTBL.jpg', 'https://www.youtube.com/watch?v=-rxy9lI8-7Q', '<p>Technology allows us to share ideas, to find answers that no one could have found on their own.<br/>It is also important to listen to other people. When we do both things, we become a part of something much larger than ourselves.</p>');
 
 --
 -- Indici per le tabelle scaricate
