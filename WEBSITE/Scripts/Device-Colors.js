@@ -1,7 +1,6 @@
 function changeColor(color){
     console.log(color);
     var newImagePath = sessionStorage.getItem(color);
-    console.log(newImagePath);
     $('#productImageDiv').html("<img src=\""+newImagePath+"\">"+"</img>");
 }
 
@@ -29,7 +28,7 @@ function ajaxCallForColors(){
                     el+= "<input type=\"button\" style=\"background-color:"+color+
                     "\" onclick=\""+"changeColor(\'"+color+"\')"+"\" />";
                 }
-                console.log(el);
+
                 el += "</div>";
                 $('#colorsDiv').html(el);
             },

@@ -128,7 +128,7 @@ function loadPage(){
             var assistanceServices = JSON.parse(response);
             console.log(JSON.parse(response));
             console.log("Response parsed successfully");
-            var name; var category; var subcategory;
+            var name; var category; var subcategory; var id;
 
             $('#RelatedServices').append("<h4>Assistance Services</h4>");
 
@@ -136,8 +136,15 @@ function loadPage(){
                 name= assistanceServices[i].ASName;
                 category= assistanceServices[i].ASCategory;
                 subcategory= assistanceServices[i].ASsubcategory;
+                id = assistanceServices[i].ID;
 
-                $('#RelatedServices').append(category+" : "+subcategory+" : "+"<a href=\"#\">"+name+"</a><br/>");
+                var newService =
+                    category+" : "+subcategory+" : "+
+                    "<a href=\""+"AssistanceTopic.html?"+id+"\">"+name+
+                    "</a><br/>";
+                console.log(newService);
+                $('#RelatedServices').append(newService);
+
             }
 
             },
