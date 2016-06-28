@@ -1,6 +1,6 @@
 <?php
 
-$connection = mysqli_connect('localhost','user1','user1','timdatabase'); //establish a connection with the database
+$connection = mysqli_connect('localhost','hypermediatim','','my_hypermediatim'); //establish a connection with the database
 
 if (mysqli_connect_errno()){
     print("Error connecting to DBMS:".mysqli_connect_error());

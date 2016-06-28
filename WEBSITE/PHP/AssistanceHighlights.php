@@ -1,8 +1,8 @@
 <?php
 $servername='localhost';
-$username='user1';
-$password='user1';
-$database='timdatabase';
+$username='hypermediatim';
+$password='';
+$database='my_hypermediatim';
 
 $connection = new mysqli($servername, $username, $password, $database);
 if ($connection->connect_error) {
