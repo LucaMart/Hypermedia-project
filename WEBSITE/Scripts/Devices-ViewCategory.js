@@ -81,7 +81,7 @@ function filter(){
                 //console.log(name);
 
                 listOfDevicesDivs+=
-                    "<div class= \"device col-xs-12 col-sm-3\">"+
+                    "<div class= \"device col-xs-12 col-sm-3 vcenter\">"+
                     "<img src=\""+imagePath+"\">"+"</img>"+
                     "<a href=\"Device.html?device="+name+"\""+">"+name+"</a>"+
                     "<p>"+price+"</p>"+

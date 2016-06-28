@@ -36,7 +36,7 @@ h5 {
     margin: 0 auto;
     max-width: 90%;
     min-width: 60px;
-    max-width: 150px;
+    max-width: 140px;
 }
 
 .device a {
@@ -67,4 +67,10 @@ h5 {
     #relatedDevTitle {
     margin-top: -10px;
 }
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
