@@ -17,10 +17,10 @@ $query = "SELECT Category FROM assistanceservice WHERE ID='$id'";
 $result = $connection->query($query);
 if($result->num_rows == 1){
     $category = $result->fetch_assoc()['Category'];
-    $query = "SELECT SubCategory FROM timdatabase.assistanceservice WHERE Category ='$category' GROUP BY SubCategory";
+    $query = "SELECT SubCategory FROM assistanceservice WHERE Category ='$category' GROUP BY SubCategory";
     $result = $connection->query($query);
     $i = 0;
-    while($row = $result->fetch_assoc()) {
+    while($row = $result->fetch_assoc()){
         $c = 0;
         $myArray[$i][$c] = $row['SubCategory'];
         $subCategory = $myArray[$i][$c];
