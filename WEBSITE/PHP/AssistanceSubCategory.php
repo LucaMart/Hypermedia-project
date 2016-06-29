@@ -16,7 +16,8 @@ $id = $_POST ["id"];
 $query = "SELECT Category FROM assistanceservice WHERE ID='$id'";
 $result = $connection->query($query);
 if($result->num_rows == 1){
-    $category = $result->fetch_assoc()['Category'];
+    $bridge = $result->fetch_assoc();
+    $category = $bridge['Category'];
     $query = "SELECT SubCategory FROM assistanceservice WHERE Category ='$category' GROUP BY SubCategory";
     $result = $connection->query($query);
     $i = 0;
