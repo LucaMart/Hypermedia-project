@@ -8,10 +8,10 @@ function loadPage(){
     var filePathPhp="";
 
     if (serviceType=="AssistanceService"){
-        filePathPhp="./PHP/RelatedDevices-AS.php";
+        filePathPhp="http://hypermediatim.altervista.org/PHP/RelatedDevices-AS.php";
     }
     if (serviceType=="SmartLifeService"){
-        filePathPhp="./PHP/RelatedDevices-SL.php";
+        filePathPhp="http://hypermediatim.altervista.org/PHP/RelatedDevices-SL.php";
     }
 
 

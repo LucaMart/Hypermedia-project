@@ -4,7 +4,7 @@ function fun(){
     $('#button').attr("href", "AssistanceTopic.html?"+id);
     $.ajax({
         method: "POST",
-        url: "PHP/FAQ.php",
+        url: "http://hypermediatim.altervista.org/PHP/FAQ.php",
         data: {
             id : id
         },

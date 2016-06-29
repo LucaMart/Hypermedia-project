@@ -32,7 +32,7 @@ function filter(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/Filtertest.php", //Relative or absolute path to file.php file
+        url: "http://hypermediatim.altervista.org/PHP/Filtertest.php", //Relative or absolute path to file.php file
         data: {
             category : ourCategory,
             checkbox : JSON.stringify(checkboxOn),

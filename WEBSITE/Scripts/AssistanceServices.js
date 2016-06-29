@@ -4,7 +4,7 @@ function fun(){
     
     $.ajax({
             method: "POST",
-            url: "PHP/AssistanceServices.php",
+            url: "http://hypermediatim.altervista.org/PHP/AssistanceServices.php",
             success: function(response){
                 var categories = JSON.parse(response);
                 var i;

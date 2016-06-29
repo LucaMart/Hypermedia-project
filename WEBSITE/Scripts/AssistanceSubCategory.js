@@ -3,7 +3,7 @@ $(document).ready(fun);
 function fun(){
     $.ajax({
             method: "POST",
-            url: "PHP/AssistanceSubCategory.php",
+            url: "http://hypermediatim.altervista.org/PHP/AssistanceSubCategory.php",
             data: {
                 id: id
             },

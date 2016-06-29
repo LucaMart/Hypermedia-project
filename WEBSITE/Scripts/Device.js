@@ -11,8 +11,8 @@ function loadPage(){
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
-        //crossDomain: true, //localhost purposes
-        url: "./PHP/Device.php", //Relative or absolute path to file.php file
+        crossDomain: true, //localhost purposes
+        url: "http://hypermediatim.altervista.org/PHP/Device.php", //Relative or absolute path to file.php file
         data: {
             deviceName: ourDevice
             },

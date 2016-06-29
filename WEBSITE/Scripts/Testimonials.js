@@ -7,7 +7,7 @@ function loadPage(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/Testimonials.php", //Relative or absolute path to file.php file
+        url: "http://hypermediatim.altervista.org/PHP/Testimonials.php", //Relative or absolute path to file.php file
 
         success: function(response) {
 

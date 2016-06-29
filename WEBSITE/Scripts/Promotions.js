@@ -73,7 +73,7 @@ function loadPageProm(listOfDevicesDivs){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url: "./PHP/Promotions(SL).php", //Relative or absolute path to file.php file,
+        url: "http://hypermediatim.altervista.org/PHP/Promotions(SL).php", //Relative or absolute path to file.php file,
         success: function(response) {
             console.log("Preparing to parse response...");
             console.log(JSON.parse(response));
