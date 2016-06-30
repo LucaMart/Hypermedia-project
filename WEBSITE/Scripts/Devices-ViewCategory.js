@@ -1,3 +1,7 @@
+ $(document).bind("mobileinit", function () {
+$.support.cors = true;
+$.mobile.allowCrossDomainPages = true; });
+
 $(document).ready(resetRanges);
 $(document).ready(filter);
 
@@ -31,7 +35,7 @@ function filter(){
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
-        //crossDomain: true, //localhost purposes
+        crossDomain: true, //localhost purposes
         url: "http://hypermediatim.altervista.org/PHP/Filtertest.php", //Relative or absolute path to file.php file
         data: {
             category : ourCategory,

@@ -1,3 +1,7 @@
+ $(document).bind("mobileinit", function () {
+$.support.cors = true;
+$.mobile.allowCrossDomainPages = true; });
+
 function changeColor(color){
     console.log(color);
     var newImagePath = sessionStorage.getItem(color);

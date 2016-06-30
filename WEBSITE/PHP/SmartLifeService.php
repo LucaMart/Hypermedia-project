@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 
 $connection = mysqli_connect('localhost','hypermediatim','','my_hypermediatim'); //establish a connection with the database
 

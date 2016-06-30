@@ -1,9 +1,14 @@
+ $(document).bind("mobileinit", function () {
+$.support.cors = true;
+$.mobile.allowCrossDomainPages = true; });
+
 $(document).ready(fun);
 
 function fun(){
     $('#button').attr("href", "AssistanceTopic.html?"+id);
     $.ajax({
         method: "POST",
+        crossDomain: true,
         url: "http://hypermediatim.altervista.org/PHP/FAQ.php",
         data: {
             id : id

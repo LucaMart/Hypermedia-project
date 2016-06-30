@@ -1,3 +1,7 @@
+ $(document).bind("mobileinit", function () {
+$.support.cors = true;
+$.mobile.allowCrossDomainPages = true; });
+
 //$(document).ready(loadPage);
 
 function startConnection(){
@@ -7,7 +11,7 @@ function startConnection(){
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
-        //crossDomain: true, //localhost purposes
+        crossDomain: true, //localhost purposes
         url: "http://hypermediatim.altervista.org/PHP/getDevices.php", //Relative or absolute path to file.php file
         data: {course:id},
         success: function(response) {

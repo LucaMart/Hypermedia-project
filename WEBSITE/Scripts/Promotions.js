@@ -1,3 +1,7 @@
+ $(document).bind("mobileinit", function () {
+$.support.cors = true;
+$.mobile.allowCrossDomainPages = true; });
+
 $(document).ready(resetRanges);
 $(document).ready(loadPageDev);
 
@@ -28,7 +32,7 @@ function loadPageDev(){
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
-        //crossDomain: true, //localhost purposes
+        crossDomain: true, //localhost purposes
         url: "./PHP/Promotions(Dev).php", //Relative or absolute path to file.php file,
         success: function(response) {
 
@@ -72,7 +76,7 @@ function loadPageProm(listOfDevicesDivs){
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
-        //crossDomain: true, //localhost purposes
+        crossDomain: true, //localhost purposes
         url: "http://hypermediatim.altervista.org/PHP/Promotions(SL).php", //Relative or absolute path to file.php file,
         success: function(response) {
             console.log("Preparing to parse response...");
