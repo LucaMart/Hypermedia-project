@@ -48,7 +48,7 @@ function loadPage(){
         method: "POST",
         //dataType: "json", //type of data
         //crossDomain: true, //localhost purposes
-        url:  "./PHP/Homepage.php", //Relative or absolute path to file.php file
+        url:  "http://hypermediatim.altervista.org/PHP/Homepage.php", //Relative or absolute path to file.php file
         data: {
             featuredType: "Project"
             },
